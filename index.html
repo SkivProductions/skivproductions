@@ -173,12 +173,14 @@
             animation-play-state: paused;
         }
 
+        /* Each logo is 150px + 64px gap = 214px per logo */
+        /* 10 logos = 2140px total distance */
         @keyframes scroll {
             0% {
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-66.66%);
+                transform: translateX(-2140px);
             }
         }
 
