@@ -945,8 +945,34 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
             .nav-links {
                 display: none;
+            }
+
+            .hero {
+                height: 70vh;
+            }
+
+            .brands {
+                padding: 3rem 0;
+            }
+
+            .brands-title {
+                font-size: 0.85rem;
+                margin-bottom: 2rem;
+            }
+
+            .brand-logo {
+                height: 40px;
+                min-width: 80px;
             }
 
             .contact-info {
@@ -954,8 +980,13 @@
                 gap: 2rem;
             }
 
+            .portfolio {
+                padding: 3rem 0;
+            }
+
             .portfolio-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
             }
 
             .services-boxes {
@@ -963,35 +994,72 @@
             }
 
             .service-box {
-                min-height: 400px;
+                min-height: 350px;
+            }
+
+            .services {
+                padding: 4rem 0;
+            }
+
+            .services h2,
+            .about h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .what-we-do-intro p {
+                font-size: 1rem;
+            }
+
+            .about {
+                padding: 4rem 0;
+            }
+
+            .contact {
+                padding: 4rem 0;
+            }
+
+            .contact-subtitle {
+                font-size: 1rem;
             }
 
             .unmute-button {
                 bottom: 1.5rem;
-                right: 1.5rem;
+                right: 1rem;
                 width: 45px;
                 height: 45px;
+                font-size: 1rem;
             }
 
             .modal-content {
-                padding: 1.5rem;
-                margin: 1rem;
-                width: 95%;
+                padding: 1rem;
+                margin: 0.5rem;
+                width: 98%;
             }
 
             .modal-close {
-                top: 1rem;
-                right: 1rem;
-                font-size: 2rem;
+                top: 0.5rem;
+                right: 0.5rem;
+                font-size: 2.5rem;
             }
 
             .modal-layout {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1.5rem;
+                max-height: none;
             }
 
             .modal-layout:not(.horizontal) .modal-video-wrapper {
                 max-width: 100%;
+            }
+
+            .modal-video-container {
+                max-height: 70vh;
+            }
+
+            .modal-video-container.vertical {
+                max-height: 70vh;
+                padding-bottom: 177.78%;
             }
 
             .modal-info {
@@ -999,25 +1067,55 @@
                 margin-top: 0;
             }
 
+            .modal-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .modal-info p {
+                font-size: 0.95rem;
+            }
+
+            .modal-description {
+                font-size: 0.9rem;
+            }
+
             .series-modal-layout {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1.5rem;
+                max-height: none;
+            }
+
+            .series-video-main {
+                max-width: 100%;
+            }
+
+            .series-main-video-container {
+                max-height: none;
             }
 
             .series-info {
                 flex: 1;
             }
 
+            .series-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .series-info .series-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .series-info .series-description {
+                font-size: 0.9rem;
+            }
+
             .video-thumbnail {
                 flex: 0 0 140px;
             }
 
-            .modal-info h2 {
-                font-size: 2rem;
-            }
-
-            .series-info h2 {
-                font-size: 2rem;
+            .thumbnail-title {
+                font-size: 0.75rem;
+                padding: 0.6rem;
             }
 
             .form-row {
@@ -1026,12 +1124,22 @@
             }
 
             .contact-form-container {
-                margin-top: 3rem;
+                margin-top: 2rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
             }
 
             .cookie-content {
                 flex-direction: column;
                 text-align: center;
+                padding: 0.5rem;
+            }
+
+            .cookie-text {
+                font-size: 0.85rem;
             }
 
             .cookie-buttons {
@@ -1041,6 +1149,65 @@
 
             .cookie-button {
                 width: 100%;
+            }
+
+            footer {
+                padding: 2rem 0;
+            }
+
+            .footer-content {
+                font-size: 0.8rem;
+            }
+
+            .footer-content p {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Extra small phones */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                padding: 1rem 0;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .brand-logo {
+                height: 35px;
+                min-width: 70px;
+            }
+
+            .portfolio-item {
+                aspect-ratio: 1;
+            }
+
+            .services h2,
+            .about h2,
+            .contact h2 {
+                font-size: 1.75rem;
+            }
+
+            .modal-info h2,
+            .series-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-box {
+                min-height: 300px;
+            }
+
+            .service-box h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-box-text p {
+                font-size: 0.9rem;
             }
         }
     </style>
