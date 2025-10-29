@@ -1031,6 +1031,8 @@
                 padding: 1rem;
                 margin: 0.5rem;
                 width: 98%;
+                overflow-y: auto;
+                max-height: 95vh;
             }
 
             .modal-close {
@@ -1047,6 +1049,16 @@
 
             .modal-layout:not(.horizontal) .modal-video-wrapper {
                 max-width: 100%;
+            }
+
+            .modal-video-container.vertical {
+                max-height: 75vh;
+                padding-bottom: 133.33%;
+            }
+
+            .series-main-video-container {
+                max-height: 75vh;
+                padding-bottom: 133.33%;
             }
 
             .modal-info {
