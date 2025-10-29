@@ -323,7 +323,6 @@
             display: flex;
             gap: 3rem;
             align-items: flex-start;
-            max-height: 85vh;
         }
 
         .modal-layout.horizontal {
@@ -358,7 +357,6 @@
 
         .modal-video-container.vertical {
             padding-bottom: 177.78%;
-            max-height: 80vh;
             width: 100%;
         }
 
@@ -418,7 +416,6 @@
             display: flex;
             gap: 3rem;
             margin-bottom: 2rem;
-            max-height: 85vh;
             align-items: flex-start;
         }
 
@@ -433,7 +430,6 @@
             position: relative;
             padding-bottom: 177.78%;
             height: 0;
-            max-height: 75vh;
             overflow: hidden;
             background: #000;
             margin-bottom: 2rem;
@@ -1053,15 +1049,6 @@
                 max-width: 100%;
             }
 
-            .modal-video-container {
-                max-height: 70vh;
-            }
-
-            .modal-video-container.vertical {
-                max-height: 70vh;
-                padding-bottom: 177.78%;
-            }
-
             .modal-info {
                 flex: 1;
                 margin-top: 0;
@@ -1643,6 +1630,14 @@
         function closeVideoModal() {
             const modal = document.getElementById('videoModal');
             const container = document.getElementById('modalVideoContainer');
+            
+            // Stop all iframes from playing
+            const iframes = container.getElementsByTagName('iframe');
+            for (let i = 0; i < iframes.length; i++) {
+                iframes[i].src = '';
+            }
+            
+            // Clear the container
             container.innerHTML = '';
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
@@ -1655,8 +1650,30 @@
         }
 
         function closeSeriesModal() {
-            document.getElementById('seriesModal').classList.remove('active');
+            const modal = document.getElementById('seriesModal');
+            const container = document.getElementById('seriesMainVideo');
+            
+            // Stop all iframes from playing
+            const iframes = container.getElementsByTagName('iframe');
+            for (let i = 0; i < iframes.length; i++) {
+                iframes[i].src = '';
+            }
+            
+            // Reset to first video (stopped)
+            container.innerHTML = '<iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+            modal.classList.remove('active');
             document.body.style.overflow = 'auto';
+            
+            // Reset to first video thumbnail
+            const thumbnails = document.querySelectorAll('.video-thumbnail');
+            thumbnails.forEach((thumb, i) => {
+                if (i === 0) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+            document.getElementById('seriesCurrentTitle').textContent = 'When Nature Calls - Desert';
         }
 
         function changeSeriesVideo(videoId, title, index) {
