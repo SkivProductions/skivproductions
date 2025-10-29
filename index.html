@@ -184,13 +184,13 @@
             height: 80px;
             width: auto;
             min-width: 150px;
-            filter: grayscale(100%) brightness(0.5);
+            filter: grayscale(100%) brightness(0.8);
             transition: all 0.3s ease;
             flex-shrink: 0;
         }
 
         .brand-logo:hover {
-            filter: grayscale(100%) brightness(0.7);
+            filter: grayscale(100%) brightness(1);
             transform: scale(1.05);
         }
 
@@ -341,8 +341,14 @@
             flex-shrink: 0;
         }
 
+        .modal-layout.horizontal .modal-video-wrapper {
+            width: 100%;
+            max-width: 900px;
+        }
+
         .modal-video-container {
             position: relative;
+            width: 100%;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
@@ -353,6 +359,14 @@
         .modal-video-container.vertical {
             padding-bottom: 177.78%;
             max-height: 80vh;
+            width: 100%;
+        }
+
+        .modal-layout.horizontal .modal-video-container {
+            padding-bottom: 56.25%;
+            max-width: 900px;
+            margin: 0 auto;
+            height: 0;
         }
 
         .modal-video-container iframe {
@@ -1104,7 +1118,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131292999', 'Dionysos Festival', 'Event Coverage', false, 'Event coverage description here.')">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131292999', 'Dionysos Festival', 'Event Coverage', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131292999?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1116,7 +1130,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false, 'Real estate showcase description here.')">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291022?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1128,7 +1142,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false, 'Real estate showcase description here.')">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131289219?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1140,14 +1154,14 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131293063', 'Schijt Situatie', 'Advertisement Campaign', true, 'For Schijt Situatie, I developed and produced the &quot;Where will you be when nature strikes?&quot; campaign, a playful, story-driven concept emphasizing the brand\'s ability to deliver eco-friendly toilet paper anywhere in Belgium. The campaign included multiple video pieces, such as the main ad &quot;Where will you be when nature calls&quot; and a complementary TV sketch, both designed to blend humor with brand awareness.')">
+            <div class="portfolio-item fade-in" onclick="openSeriesModal()">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="portfolio-overlay">
                     <div class="portfolio-info">
                         <h3>Schijt Situatie</h3>
-                        <p>Advertisement Campaign</p>
+                        <p>Advertisement Campaign • View All →</p>
                     </div>
                 </div>
             </div>
