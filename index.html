@@ -181,9 +181,9 @@
         }
 
         .brand-logo {
-            height: 50px;
+            height: 80px;
             width: auto;
-            min-width: 100px;
+            min-width: 150px;
             filter: grayscale(100%) brightness(0.5);
             transition: all 0.3s ease;
             flex-shrink: 0;
@@ -323,6 +323,7 @@
             display: flex;
             gap: 3rem;
             align-items: flex-start;
+            max-height: 85vh;
         }
 
         .modal-layout.horizontal {
@@ -336,7 +337,8 @@
         }
 
         .modal-layout:not(.horizontal) .modal-video-wrapper {
-            max-width: 600px;
+            max-width: 450px;
+            flex-shrink: 0;
         }
 
         .modal-video-container {
@@ -350,6 +352,7 @@
 
         .modal-video-container.vertical {
             padding-bottom: 177.78%;
+            max-height: 80vh;
         }
 
         .modal-video-container iframe {
@@ -401,17 +404,22 @@
             display: flex;
             gap: 3rem;
             margin-bottom: 2rem;
+            max-height: 85vh;
+            align-items: flex-start;
         }
 
         .series-video-main {
             flex: 1;
             min-width: 0;
+            max-width: 450px;
+            flex-shrink: 0;
         }
 
         .series-main-video-container {
             position: relative;
             padding-bottom: 177.78%;
             height: 0;
+            max-height: 75vh;
             overflow: hidden;
             background: #000;
             margin-bottom: 2rem;
@@ -1096,7 +1104,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131292999', 'Dionysos Festival', 'Event Coverage', false)">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131292999', 'Dionysos Festival', 'Event Coverage', false, 'Event coverage description here.')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131292999?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1108,7 +1116,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false)">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false, 'Real estate showcase description here.')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291022?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1120,7 +1128,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false)">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false, 'Real estate showcase description here.')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131289219?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1132,19 +1140,19 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openSeriesModal()">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131293063', 'Schijt Situatie', 'Advertisement Campaign', true, 'For Schijt Situatie, I developed and produced the &quot;Where will you be when nature strikes?&quot; campaign, a playful, story-driven concept emphasizing the brand\'s ability to deliver eco-friendly toilet paper anywhere in Belgium. The campaign included multiple video pieces, such as the main ad &quot;Where will you be when nature calls&quot; and a complementary TV sketch, both designed to blend humor with brand awareness.')">
                 <div class="portfolio-video-thumbnail">
-                    <iframe src="https://player.vimeo.com/video/1131292847?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="portfolio-overlay">
                     <div class="portfolio-info">
                         <h3>Schijt Situatie</h3>
-                        <p>Advertisement Series • View All →</p>
+                        <p>Advertisement Campaign</p>
                     </div>
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291509', 'Zwidemu', 'Event Coverage', true)">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291509', 'Zwidemu', 'Event Coverage', true, 'Event coverage description here.')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291509?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1156,7 +1164,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291969', 'Konsens', 'Event Teaser', true)">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291969', 'Konsens', 'Event Teaser', true, 'Event teaser description here.')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291969?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -1168,7 +1176,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289101', 'DJ Gorgo', 'Rebranding', true)">
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289101', 'DJ Gorgo', 'Rebranding', true, 'Rebranding content description here.')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131289101?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
