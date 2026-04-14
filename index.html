@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #000000;
@@ -18,13 +18,13 @@
             line-height: 1.4;
             overflow-x: hidden;
         }
-
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
+ 
         /* Navigation */
         nav {
             position: fixed;
@@ -36,31 +36,31 @@
             padding: 1.5rem 0;
             transition: all 0.3s ease;
         }
-
+ 
         nav.scrolled {
             background: rgba(0, 0, 0, 0.95);
             padding: 1rem 0;
         }
-
+ 
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+ 
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: #ffffff;
             letter-spacing: 2px;
         }
-
+ 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 3rem;
         }
-
+ 
         .nav-links a {
             color: #ffffff;
             text-decoration: none;
@@ -70,11 +70,11 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
         }
-
+ 
         .nav-links a:hover {
             opacity: 0.7;
         }
-
+ 
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -84,7 +84,7 @@
             position: relative;
             background: #000000;
         }
-
+ 
         .hero-video-container {
             position: absolute;
             top: 0;
@@ -94,7 +94,7 @@
             overflow: hidden;
             z-index: 1;
         }
-
+ 
         .hero-video-container iframe {
             position: absolute;
             top: 50%;
@@ -106,7 +106,7 @@
             transform: translate(-50%, -50%);
             pointer-events: none;
         }
-
+ 
         /* Unmute Button */
         .unmute-button {
             position: fixed;
@@ -127,23 +127,23 @@
             transition: all 0.3s ease;
             font-size: 1.2rem;
         }
-
+ 
         .unmute-button:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: scale(1.1);
         }
-
+ 
         .unmute-button:active {
             transform: scale(0.95);
         }
-
+ 
         /* Brands Section */
         .brands {
             padding: 4rem 0;
             background: #000000;
             text-align: center;
         }
-
+ 
         .brands-title {
             font-size: 1rem;
             color: #888888;
@@ -152,14 +152,14 @@
             letter-spacing: 2px;
             font-weight: 300;
         }
-
+ 
         .brands-carousel-container {
             overflow: hidden;
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
         }
-
+ 
         .brands-grid {
             display: flex;
             align-items: center;
@@ -168,13 +168,11 @@
             will-change: transform;
             backface-visibility: hidden;
         }
-
+ 
         .brands-grid:hover {
             animation-play-state: paused;
         }
-
-        /* Each logo is 150px + 64px gap = 214px per logo */
-        /* Need to move 11 logos worth to show all 10 completely and have AZ appear */
+ 
         @keyframes scroll {
             0% {
                 transform: translateX(0);
@@ -183,7 +181,7 @@
                 transform: translateX(-2354px);
             }
         }
-
+ 
         .brand-logo {
             height: 80px;
             width: auto;
@@ -194,25 +192,25 @@
             backface-visibility: hidden;
             transform: translateZ(0);
         }
-
+ 
         .brand-logo:hover {
             filter: grayscale(100%) brightness(1);
             transform: scale(1.15);
         }
-
+ 
         /* Portfolio Section */
         .portfolio {
             padding: 6rem 0;
             background: #000000;
         }
-
+ 
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             max-width: 100%;
         }
-
+ 
         .portfolio-item {
             position: relative;
             aspect-ratio: 1;
@@ -221,14 +219,14 @@
             background: #111111;
             border-radius: 4px;
         }
-
+ 
         .portfolio-video-thumbnail {
             width: 100%;
             height: 100%;
             position: relative;
             transition: all 0.3s ease;
         }
-
+ 
         .portfolio-video-thumbnail iframe {
             position: absolute;
             top: 0;
@@ -237,11 +235,11 @@
             height: 100%;
             pointer-events: none;
         }
-
+ 
         .portfolio-item:hover .portfolio-video-thumbnail {
             transform: scale(1.05);
         }
-
+ 
         .portfolio-overlay {
             position: absolute;
             top: 0;
@@ -255,31 +253,31 @@
             opacity: 0;
             transition: all 0.3s ease;
         }
-
+ 
         .portfolio-item:hover .portfolio-overlay {
             opacity: 1;
         }
-
+ 
         .portfolio-info {
             text-align: center;
             color: #ffffff;
             padding: 2rem;
         }
-
+ 
         .portfolio-info h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             font-weight: 300;
             letter-spacing: 1px;
         }
-
+ 
         .portfolio-info p {
             font-size: 0.9rem;
             color: #cccccc;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-
+ 
         /* Modal */
         .modal {
             display: none;
@@ -292,13 +290,13 @@
             background-color: rgba(0, 0, 0, 0.95);
             overflow-y: auto;
         }
-
+ 
         .modal.active {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
+ 
         .modal-content {
             position: relative;
             margin: 2rem auto;
@@ -306,7 +304,7 @@
             max-width: 1400px;
             width: 90%;
         }
-
+ 
         .modal-close {
             position: fixed;
             top: 2rem;
@@ -318,39 +316,39 @@
             transition: all 0.3s ease;
             line-height: 1;
         }
-
+ 
         .modal-close:hover {
             color: #999999;
             transform: rotate(90deg);
         }
-
+ 
         /* Single Video Modal Layout */
         .modal-layout {
             display: flex;
             gap: 3rem;
             align-items: flex-start;
         }
-
+ 
         .modal-layout.horizontal {
             flex-direction: column;
             align-items: center;
         }
-
+ 
         .modal-video-wrapper {
             flex: 1;
             max-width: 100%;
         }
-
+ 
         .modal-layout:not(.horizontal) .modal-video-wrapper {
             max-width: 450px;
             flex-shrink: 0;
         }
-
+ 
         .modal-layout.horizontal .modal-video-wrapper {
             width: 100%;
             max-width: 900px;
         }
-
+ 
         .modal-video-container {
             position: relative;
             width: 100%;
@@ -360,7 +358,7 @@
             background: #000;
             border-radius: 4px;
         }
-
+ 
         .modal-video-container.vertical {
             position: relative;
             width: 450px;
@@ -370,14 +368,14 @@
             padding-bottom: 0;
             background: #000;
         }
-
+ 
         .modal-layout.horizontal .modal-video-container {
             padding-bottom: 56.25%;
             max-width: 900px;
             margin: 0 auto;
             height: 0;
         }
-
+ 
         .modal-video-container iframe {
             position: absolute;
             top: 0;
@@ -386,7 +384,7 @@
             height: 100%;
             border: none;
         }
-
+ 
         .modal-video-container.vertical iframe {
             position: absolute;
             top: 0;
@@ -394,26 +392,26 @@
             width: 100%;
             height: 100%;
         }
-
+ 
         .modal-info {
             flex: 0 0 400px;
             color: #ffffff;
         }
-
+ 
         .modal-layout.horizontal .modal-info {
             flex: 1;
             text-align: center;
             margin-top: 2rem;
             max-width: 800px;
         }
-
+ 
         .modal-info h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 300;
             letter-spacing: 1px;
         }
-
+ 
         .modal-info p {
             font-size: 1.1rem;
             color: #cccccc;
@@ -421,7 +419,7 @@
             letter-spacing: 2px;
             margin-bottom: 2rem;
         }
-
+ 
         .modal-description {
             font-size: 1rem;
             color: #aaaaaa;
@@ -429,22 +427,22 @@
             text-transform: none;
             letter-spacing: normal;
         }
-
-        /* Series Modal Layout - Schijt Situatie */
+ 
+        /* Series Modal Layout */
         .series-modal-layout {
             display: flex;
             gap: 3rem;
             margin-bottom: 2rem;
             align-items: flex-start;
         }
-
+ 
         .series-video-main {
             flex: 1;
             min-width: 0;
             max-width: 450px;
             flex-shrink: 0;
         }
-
+ 
         .series-main-video-container {
             position: relative;
             padding-bottom: 177.78%;
@@ -454,7 +452,7 @@
             margin-bottom: 2rem;
             border-radius: 4px;
         }
-
+ 
         .series-main-video-container iframe {
             position: absolute;
             top: 0;
@@ -463,19 +461,19 @@
             height: 100%;
             border: none;
         }
-
+ 
         .series-info {
             flex: 0 0 400px;
             color: #ffffff;
         }
-
+ 
         .series-info h2 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             font-weight: 300;
             letter-spacing: 1px;
         }
-
+ 
         .series-info .series-subtitle {
             font-size: 1.1rem;
             color: #cccccc;
@@ -483,33 +481,33 @@
             letter-spacing: 2px;
             margin-bottom: 2rem;
         }
-
+ 
         .series-info .series-description {
             font-size: 1rem;
             color: #aaaaaa;
             line-height: 1.8;
             margin-bottom: 2rem;
         }
-
+ 
         .series-current-title {
             font-size: 1.3rem;
             color: #ffffff;
             margin-bottom: 1rem;
             font-weight: 400;
         }
-
+ 
         /* Video Thumbnails Carousel */
         .video-thumbnails {
             margin-top: 1rem;
         }
-
+ 
         .video-thumbnails h3 {
             font-size: 1.2rem;
             color: #ffffff;
             margin-bottom: 1.5rem;
             font-weight: 300;
         }
-
+ 
         .thumbnails-scroll {
             display: flex;
             gap: 1rem;
@@ -518,25 +516,25 @@
             padding-bottom: 1rem;
             scroll-behavior: smooth;
         }
-
+ 
         .thumbnails-scroll::-webkit-scrollbar {
             height: 8px;
         }
-
+ 
         .thumbnails-scroll::-webkit-scrollbar-track {
             background: #222;
             border-radius: 4px;
         }
-
+ 
         .thumbnails-scroll::-webkit-scrollbar-thumb {
             background: #555;
             border-radius: 4px;
         }
-
+ 
         .thumbnails-scroll::-webkit-scrollbar-thumb:hover {
             background: #777;
         }
-
+ 
         .video-thumbnail {
             flex: 0 0 180px;
             cursor: pointer;
@@ -546,16 +544,16 @@
             overflow: hidden;
             background: #111;
         }
-
+ 
         .video-thumbnail:hover {
             border-color: #ffffff;
             transform: translateY(-5px);
         }
-
+ 
         .video-thumbnail.active {
             border-color: #4ecdc4;
         }
-
+ 
         .thumbnail-container {
             position: relative;
             padding-bottom: 100%;
@@ -563,7 +561,7 @@
             overflow: hidden;
             background: #111;
         }
-
+ 
         .thumbnail-container iframe {
             position: absolute;
             top: 0;
@@ -573,7 +571,7 @@
             pointer-events: none;
             border: none;
         }
-
+ 
         .thumbnail-title {
             padding: 0.8rem;
             font-size: 0.85rem;
@@ -582,13 +580,13 @@
             text-align: center;
             font-weight: 300;
         }
-
+ 
         /* About Section */
         .about {
             padding: 8rem 0;
             background: #111111;
         }
-
+ 
         .what-we-do-intro h2 {
             font-size: 3rem;
             margin-bottom: 2rem;
@@ -597,7 +595,7 @@
             text-align: center;
             letter-spacing: 1px;
         }
-
+ 
         .what-we-do-intro p {
             font-size: 1.2rem;
             color: #cccccc;
@@ -607,7 +605,7 @@
             line-height: 1.8;
             font-weight: 300;
         }
-
+ 
         .services-boxes {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -615,7 +613,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-
+ 
         .service-box {
             position: relative;
             aspect-ratio: 1;
@@ -625,12 +623,12 @@
             cursor: pointer;
             transition: all 0.4s ease;
         }
-
+ 
         .service-box:hover {
             border-color: #666;
             transform: translateY(-5px);
         }
-
+ 
         .service-box-content {
             position: relative;
             width: 100%;
@@ -641,7 +639,7 @@
             align-items: center;
             justify-content: center;
         }
-
+ 
         .service-box h3 {
             font-size: 1.8rem;
             color: #ffffff;
@@ -651,7 +649,7 @@
             transition: all 0.4s ease;
             z-index: 2;
         }
-
+ 
         .service-box-text {
             position: absolute;
             top: 0;
@@ -666,15 +664,15 @@
             opacity: 0;
             transition: all 0.4s ease;
         }
-
+ 
         .service-box:hover .service-box-text {
             opacity: 1;
         }
-
+ 
         .service-box:hover h3 {
             opacity: 0;
         }
-
+ 
         .service-box-text p {
             color: #cccccc;
             font-size: 1rem;
@@ -682,20 +680,20 @@
             margin-bottom: 1rem;
             font-weight: 300;
         }
-
+ 
         .service-box-text .service-list {
             font-style: italic;
             color: #999;
             font-size: 0.9rem;
             margin-top: 1rem;
         }
-
+ 
         /* Services Section */
         .services {
             padding: 8rem 0;
             background: #000000;
         }
-
+ 
         .services h2 {
             font-size: 3rem;
             margin-bottom: 4rem;
@@ -704,18 +702,18 @@
             text-align: center;
             letter-spacing: 1px;
         }
-
+ 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
-
+ 
         .service-item {
             text-align: center;
             padding: 2rem;
         }
-
+ 
         .service-item h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
@@ -724,20 +722,20 @@
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-
+ 
         .service-item p {
             color: #cccccc;
             line-height: 1.6;
             font-weight: 300;
         }
-
+ 
         /* Contact Section */
         .contact {
             padding: 8rem 0;
             background: #111111;
             text-align: center;
         }
-
+ 
         .contact h2 {
             font-size: 3rem;
             margin-bottom: 2rem;
@@ -745,25 +743,25 @@
             font-weight: 300;
             letter-spacing: 1px;
         }
-
+ 
         .contact-subtitle {
             font-size: 1.2rem;
             color: #cccccc;
             margin-bottom: 4rem;
             font-weight: 300;
         }
-
+ 
         .contact-info {
             display: flex;
             justify-content: center;
             gap: 4rem;
             margin-bottom: 4rem;
         }
-
+ 
         .contact-item {
             text-align: center;
         }
-
+ 
         .contact-item h4 {
             font-size: 1rem;
             color: #ffffff;
@@ -772,12 +770,12 @@
             letter-spacing: 1px;
             font-weight: 400;
         }
-
+ 
         .contact-item p {
             color: #cccccc;
             font-weight: 300;
         }
-
+ 
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
@@ -792,29 +790,29 @@
             font-size: 0.9rem;
             cursor: pointer;
         }
-
+ 
         .cta-button:hover {
             background: #ffffff;
             color: #000000;
         }
-
+ 
         /* Contact Form */
         .contact-form-container {
             max-width: 700px;
             margin: 4rem auto 0;
         }
-
+ 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
-
+ 
         .form-group {
             margin-bottom: 1.5rem;
         }
-
+ 
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -827,35 +825,35 @@
             transition: all 0.3s ease;
             border-radius: 4px;
         }
-
+ 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #ffffff;
             background: rgba(255, 255, 255, 0.08);
         }
-
+ 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
             color: #888888;
         }
-
+ 
         .form-group textarea {
             resize: vertical;
             min-height: 150px;
         }
-
+ 
         #formStatus {
             margin-top: 1.5rem;
             text-align: center;
             font-size: 1rem;
             color: #4ecdc4;
         }
-
+ 
         #formStatus.error {
             color: #ff6b6b;
         }
-
+ 
         /* Cookie Consent Banner */
         .cookie-consent {
             position: fixed;
@@ -869,11 +867,11 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: none;
         }
-
+ 
         .cookie-consent.show {
             display: block;
         }
-
+ 
         .cookie-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -882,28 +880,28 @@
             justify-content: space-between;
             gap: 2rem;
         }
-
+ 
         .cookie-text {
             flex: 1;
             color: #cccccc;
             font-size: 0.95rem;
             line-height: 1.6;
         }
-
+ 
         .cookie-text a {
             color: #4ecdc4;
             text-decoration: underline;
         }
-
+ 
         .cookie-text a:hover {
             color: #ffffff;
         }
-
+ 
         .cookie-buttons {
             display: flex;
             gap: 1rem;
         }
-
+ 
         .cookie-button {
             padding: 0.75rem 1.5rem;
             background: transparent;
@@ -916,22 +914,22 @@
             letter-spacing: 1px;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
-
+ 
         .cookie-button:hover {
             background: #ffffff;
             color: #000000;
         }
-
+ 
         .cookie-button.accept {
             background: #4ecdc4;
             border-color: #4ecdc4;
         }
-
+ 
         .cookie-button.accept:hover {
             background: #3db8af;
             border-color: #3db8af;
         }
-
+ 
         /* Footer */
         footer {
             background: #000000;
@@ -939,105 +937,105 @@
             text-align: center;
             border-top: 1px solid #222222;
         }
-
+ 
         .footer-content {
             color: #666666;
             font-size: 0.9rem;
             font-weight: 300;
         }
-
+ 
         /* Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
-
+ 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
+ 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .container {
                 padding: 0 1rem;
             }
-
+ 
             .logo {
                 font-size: 1.3rem;
             }
-
+ 
             .nav-links {
                 display: none;
             }
-
+ 
             .hero {
                 height: 70vh;
             }
-
+ 
             .brands {
                 padding: 3rem 0;
             }
-
+ 
             .brands-title {
                 font-size: 0.85rem;
                 margin-bottom: 2rem;
             }
-
+ 
             .brand-logo {
                 height: 40px;
                 min-width: 80px;
             }
-
+ 
             .contact-info {
                 flex-direction: column;
                 gap: 2rem;
             }
-
+ 
             .portfolio {
                 padding: 3rem 0;
             }
-
+ 
             .portfolio-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
-
+ 
             .services-boxes {
                 grid-template-columns: 1fr;
             }
-
+ 
             .service-box {
                 min-height: 350px;
             }
-
+ 
             .services {
                 padding: 4rem 0;
             }
-
+ 
             .services h2,
             .about h2,
             .contact h2 {
                 font-size: 2rem;
             }
-
+ 
             .what-we-do-intro p {
                 font-size: 1rem;
             }
-
+ 
             .about {
                 padding: 4rem 0;
             }
-
+ 
             .contact {
                 padding: 4rem 0;
             }
-
+ 
             .contact-subtitle {
                 font-size: 1rem;
             }
-
+ 
             .unmute-button {
                 bottom: 1.5rem;
                 right: 1rem;
@@ -1045,7 +1043,7 @@
                 height: 45px;
                 font-size: 1rem;
             }
-
+ 
             .modal-content {
                 padding: 1rem;
                 margin: 0.5rem;
@@ -1053,23 +1051,23 @@
                 overflow-y: auto;
                 max-height: 95vh;
             }
-
+ 
             .modal-close {
                 top: 0.5rem;
                 right: 0.5rem;
                 font-size: 2.5rem;
             }
-
+ 
             .modal-layout {
                 flex-direction: column;
                 gap: 1.5rem;
                 max-height: none;
             }
-
+ 
             .modal-layout:not(.horizontal) .modal-video-wrapper {
                 max-width: 100%;
             }
-
+ 
             .modal-video-container.vertical {
                 padding-bottom: 0;
                 height: 75vh;
@@ -1077,7 +1075,7 @@
                 position: relative;
                 overflow: hidden;
             }
-
+ 
             .modal-video-container.vertical iframe {
                 position: absolute;
                 top: 0;
@@ -1085,7 +1083,7 @@
                 width: 100%;
                 height: 100%;
             }
-
+ 
             .series-main-video-container {
                 padding-bottom: 0;
                 height: 75vh;
@@ -1093,7 +1091,7 @@
                 position: relative;
                 overflow: hidden;
             }
-
+ 
             .series-main-video-container iframe {
                 position: absolute;
                 top: 0;
@@ -1101,151 +1099,151 @@
                 width: 100%;
                 height: 100%;
             }
-
+ 
             .modal-info {
                 flex: 1;
                 margin-top: 0;
             }
-
+ 
             .modal-info h2 {
                 font-size: 1.8rem;
             }
-
+ 
             .modal-info p {
                 font-size: 0.95rem;
             }
-
+ 
             .modal-description {
                 font-size: 0.9rem;
             }
-
+ 
             .series-modal-layout {
                 flex-direction: column;
                 gap: 1.5rem;
                 max-height: none;
             }
-
+ 
             .series-video-main {
                 max-width: 100%;
             }
-
+ 
             .series-main-video-container {
                 max-height: none;
             }
-
+ 
             .series-info {
                 flex: 1;
             }
-
+ 
             .series-info h2 {
                 font-size: 1.8rem;
             }
-
+ 
             .series-info .series-subtitle {
                 font-size: 0.95rem;
             }
-
+ 
             .series-info .series-description {
                 font-size: 0.9rem;
             }
-
+ 
             .video-thumbnail {
                 flex: 0 0 140px;
             }
-
+ 
             .thumbnail-title {
                 font-size: 0.75rem;
                 padding: 0.6rem;
             }
-
+ 
             .form-row {
                 grid-template-columns: 1fr;
                 gap: 0;
             }
-
+ 
             .contact-form-container {
                 margin-top: 2rem;
             }
-
+ 
             .form-group input,
             .form-group textarea {
-                font-size: 16px; /* Prevents zoom on iOS */
+                font-size: 16px;
             }
-
+ 
             .cookie-content {
                 flex-direction: column;
                 text-align: center;
                 padding: 0.5rem;
             }
-
+ 
             .cookie-text {
                 font-size: 0.85rem;
             }
-
+ 
             .cookie-buttons {
                 width: 100%;
                 flex-direction: column;
             }
-
+ 
             .cookie-button {
                 width: 100%;
             }
-
+ 
             footer {
                 padding: 2rem 0;
             }
-
+ 
             .footer-content {
                 font-size: 0.8rem;
             }
-
+ 
             .footer-content p {
                 margin-bottom: 0.5rem;
             }
         }
-
+ 
         /* Extra small phones */
         @media (max-width: 480px) {
             .logo {
                 font-size: 1.1rem;
             }
-
+ 
             nav {
                 padding: 1rem 0;
             }
-
+ 
             .hero {
                 height: 60vh;
             }
-
+ 
             .brand-logo {
                 height: 35px;
                 min-width: 70px;
             }
-
+ 
             .portfolio-item {
                 aspect-ratio: 1;
             }
-
+ 
             .services h2,
             .about h2,
             .contact h2 {
                 font-size: 1.75rem;
             }
-
+ 
             .modal-info h2,
             .series-info h2 {
                 font-size: 1.5rem;
             }
-
+ 
             .service-box {
                 min-height: 300px;
             }
-
+ 
             .service-box h3 {
                 font-size: 1.5rem;
             }
-
+ 
             .service-box-text p {
                 font-size: 0.9rem;
             }
@@ -1267,7 +1265,7 @@
             </div>
         </div>
     </nav>
-
+ 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-video-container" id="heroVideo">
@@ -1277,7 +1275,7 @@
             <span id="muteIcon">🔇</span>
         </div>
     </section>
-
+ 
     <!-- Brands Section -->
     <section class="brands">
         <div class="container">
@@ -1320,22 +1318,25 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Portfolio Section -->
     <section class="portfolio" id="work">
         <div class="portfolio-grid">
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131292015', 'Ariella Zeitlin', 'Concert Production', true, 'Multi-camera concert documentation for violinist Ariella Zeitlin\'s performance in Vienna. Coordinated a three-camera setup with dedicated photography to capture both intimate performance moments and the broader concert atmosphere.<br><br><strong>Credits:</strong><br>1st Camera: Emil Skvirsky<br>2nd Camera: Tareq El Hadi<br>Photographer: Rod Mambakasa')">
+ 
+            <!-- 1. Kevin Cool Release Party (NEW) -->
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1183169391', 'Kevin Cool', 'Event Coverage', false, '')">
                 <div class="portfolio-video-thumbnail">
-                    <iframe src="https://player.vimeo.com/video/1131292015?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/1183169391?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="portfolio-overlay">
                     <div class="portfolio-info">
-                        <h3>Ariella Zeitlin</h3>
-                        <p>Concert Production</p>
+                        <h3>Kevin Cool</h3>
+                        <p>Event Coverage</p>
                     </div>
                 </div>
             </div>
-
+ 
+            <!-- 2. Dionysos Festival -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131292999', 'Dionysos Festival', 'Event Coverage', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131292999?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1347,43 +1348,21 @@
                     </div>
                 </div>
             </div>
-
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false, '')">
+ 
+            <!-- 3. Ariella Zeitlin -->
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131292015', 'Ariella Zeitlin', 'Concert Production', true, 'Multi-camera concert documentation for violinist Ariella Zeitlin\'s performance in Vienna. Coordinated a three-camera setup with dedicated photography to capture both intimate performance moments and the broader concert atmosphere.<br><br><strong>Credits:</strong><br>1st Camera: Emil Skvirsky<br>2nd Camera: Tareq El Hadi<br>Photographer: Rod Mambakasa')">
                 <div class="portfolio-video-thumbnail">
-                    <iframe src="https://player.vimeo.com/video/1131291022?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/1131292015?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="portfolio-overlay">
                     <div class="portfolio-info">
-                        <h3>Auriga - Vivisol</h3>
-                        <p>Real Estate</p>
+                        <h3>Ariella Zeitlin</h3>
+                        <p>Concert Production</p>
                     </div>
                 </div>
             </div>
-
-            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false, '')">
-                <div class="portfolio-video-thumbnail">
-                    <iframe src="https://player.vimeo.com/video/1131289219?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="portfolio-overlay">
-                    <div class="portfolio-info">
-                        <h3>Auriga - Fertistream</h3>
-                        <p>Real Estate</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openSeriesModal()">
-                <div class="portfolio-video-thumbnail">
-                    <iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="portfolio-overlay">
-                    <div class="portfolio-info">
-                        <h3>Schijt Situatie</h3>
-                        <p>Advertisement Campaign • View All →</p>
-                    </div>
-                </div>
-            </div>
-
+ 
+            <!-- 4. Zwidemu -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131291509', 'Zwidemu', 'Event Coverage', true, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291509?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1395,7 +1374,47 @@
                     </div>
                 </div>
             </div>
-
+ 
+            <!-- 5. Auriga - Vivisol -->
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false, '')">
+                <div class="portfolio-video-thumbnail">
+                    <iframe src="https://player.vimeo.com/video/1131291022?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Auriga - Vivisol</h3>
+                        <p>Real Estate</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- 6. Auriga - Fertistream -->
+            <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false, '')">
+                <div class="portfolio-video-thumbnail">
+                    <iframe src="https://player.vimeo.com/video/1131289219?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Auriga - Fertistream</h3>
+                        <p>Real Estate</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- 7. Schijt Situatie -->
+            <div class="portfolio-item fade-in" onclick="openSeriesModal()">
+                <div class="portfolio-video-thumbnail">
+                    <iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Schijt Situatie</h3>
+                        <p>Advertisement Campaign • View All →</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- 8. Konsens -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131291969', 'Konsens', 'Event Teaser', true, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291969?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1407,7 +1426,8 @@
                     </div>
                 </div>
             </div>
-
+ 
+            <!-- 9. DJ Gorgo -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131289101', 'DJ Gorgo', 'Rebranding', true, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131289101?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1419,9 +1439,10 @@
                     </div>
                 </div>
             </div>
+ 
         </div>
     </section>
-
+ 
     <!-- Single Video Modal -->
     <div id="videoModal" class="modal">
         <span class="modal-close" onclick="closeVideoModal()">&times;</span>
@@ -1440,7 +1461,7 @@
             </div>
         </div>
     </div>
-
+ 
     <!-- Series Modal for Schijt Situatie -->
     <div id="seriesModal" class="modal">
         <span class="modal-close" onclick="closeSeriesModal()">&times;</span>
@@ -1489,7 +1510,7 @@
             </div>
         </div>
     </div>
-
+ 
     <!-- What We Do Section -->
     <section class="about" id="about">
         <div class="container">
@@ -1520,7 +1541,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Services Section -->
     <section class="services">
         <div class="container">
@@ -1553,7 +1574,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1574,7 +1595,7 @@
                     <p>+43 677 63502585</p>
                 </div>
             </div>
-
+ 
             <div class="contact-form-container fade-in">
                 <form id="contactForm" action="https://formspree.io/f/xpworzql" method="POST">
                     <div class="form-row">
@@ -1597,7 +1618,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Cookie Consent Banner -->
     <div class="cookie-consent" id="cookieConsent">
         <div class="cookie-content">
@@ -1610,7 +1631,7 @@
             </div>
         </div>
     </div>
-
+ 
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1623,13 +1644,13 @@
             </div>
         </div>
     </footer>
-
+ 
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
         // Vimeo Player for hero video
         let heroPlayer;
         let isMuted = true;
-
+ 
         // Initialize Vimeo player
         setTimeout(() => {
             const iframe = document.querySelector('#vimeoPlayer');
@@ -1637,7 +1658,7 @@
                 heroPlayer = new Vimeo.Player(iframe);
             }
         }, 1000);
-
+ 
         // Toggle mute function
         function toggleMute() {
             if (heroPlayer) {
@@ -1653,11 +1674,9 @@
                 }
             }
         }
-
+ 
         // Single video modal functions
         function openVideoModal(videoId, title, category, isVertical, description = '') {
-            console.log('Opening video modal:', videoId, 'isVertical:', isVertical);
-            
             const modal = document.getElementById('videoModal');
             const layout = document.getElementById('modalLayout');
             const wrapper = document.getElementById('modalVideoWrapper');
@@ -1666,83 +1685,63 @@
             const titleEl = document.getElementById('modalTitle');
             const categoryEl = document.getElementById('modalCategory');
             const descriptionEl = document.getElementById('modalDescription');
-
-            console.log('Container element:', container);
-            console.log('Container classes before:', container.className);
-
-            // Set layout based on video orientation
+ 
             if (isVertical) {
-                // Vertical video: side-by-side layout (video left, info right)
                 layout.classList.remove('horizontal');
                 wrapper.classList.remove('horizontal');
                 info.classList.remove('horizontal');
                 container.classList.add('vertical');
             } else {
-                // Horizontal video: stacked layout (video top, info bottom centered)
                 layout.classList.add('horizontal');
                 wrapper.classList.add('horizontal');
                 info.classList.add('horizontal');
                 container.classList.remove('vertical');
             }
-
-            console.log('Container classes after:', container.className);
-
-            // Load video with minimal Vimeo branding
+ 
             const iframeHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-            console.log('Loading iframe:', iframeHTML);
             container.innerHTML = iframeHTML;
-            
-            setTimeout(() => {
-                console.log('Container HTML after load:', container.innerHTML);
-                console.log('Container dimensions:', container.offsetWidth, 'x', container.offsetHeight);
-            }, 100);
             
             titleEl.textContent = title;
             categoryEl.textContent = category;
             descriptionEl.innerHTML = description;
-
+ 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
+ 
         function closeVideoModal() {
             const modal = document.getElementById('videoModal');
             const container = document.getElementById('modalVideoContainer');
             
-            // Stop all iframes from playing
             const iframes = container.getElementsByTagName('iframe');
             for (let i = 0; i < iframes.length; i++) {
                 iframes[i].src = '';
             }
             
-            // Clear the container
             container.innerHTML = '';
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
-
+ 
         // Series modal functions
         function openSeriesModal() {
             document.getElementById('seriesModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
+ 
         function closeSeriesModal() {
             const modal = document.getElementById('seriesModal');
             const container = document.getElementById('seriesMainVideo');
             
-            // Stop all iframes from playing
             const iframes = container.getElementsByTagName('iframe');
             for (let i = 0; i < iframes.length; i++) {
                 iframes[i].src = '';
             }
             
-            // Reset to first video (stopped)
             container.innerHTML = '<iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
             
-            // Reset to first video thumbnail
             const thumbnails = document.querySelectorAll('.video-thumbnail');
             thumbnails.forEach((thumb, i) => {
                 if (i === 0) {
@@ -1753,18 +1752,15 @@
             });
             document.getElementById('seriesCurrentTitle').textContent = 'When Nature Calls - Desert';
         }
-
+ 
         function changeSeriesVideo(videoId, title, index) {
             const container = document.getElementById('seriesMainVideo');
             const titleEl = document.getElementById('seriesCurrentTitle');
             
-            // Update video
             container.innerHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
             
-            // Update title
             titleEl.textContent = title;
             
-            // Update active thumbnail
             const thumbnails = document.querySelectorAll('.video-thumbnail');
             thumbnails.forEach((thumb, i) => {
                 if (i === index) {
@@ -1774,7 +1770,7 @@
                 }
             });
         }
-
+ 
         // Close modals when clicking outside
         window.onclick = function(event) {
             const videoModal = document.getElementById('videoModal');
@@ -1786,7 +1782,7 @@
                 closeSeriesModal();
             }
         }
-
+ 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1800,7 +1796,7 @@
                 }
             });
         });
-
+ 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -1810,13 +1806,13 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
+ 
         // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
         };
-
+ 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1824,15 +1820,15 @@
                 }
             });
         }, observerOptions);
-
+ 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
-
+ 
         // Contact Form Handling
         const form = document.getElementById('contactForm');
         const formStatus = document.getElementById('formStatus');
-
+ 
         if (form) {
             form.addEventListener('submit', function(e) {
                 const submitButton = form.querySelector('button[type="submit"]');
@@ -1840,14 +1836,13 @@
                 submitButton.disabled = true;
             });
         }
-
+ 
         // Cookie Consent Banner
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
             document.getElementById('cookieConsent').classList.remove('show');
         }
-
-        // Check if user has already accepted cookies
+ 
         window.addEventListener('load', function() {
             const cookieConsent = localStorage.getItem('cookieConsent');
             if (!cookieConsent) {
