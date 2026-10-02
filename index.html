@@ -174,12 +174,8 @@
         }
  
         @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-2354px);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-2354px); }
         }
  
         .brand-logo {
@@ -219,6 +215,7 @@
             background: #111111;
             border-radius: 4px;
         }
+
  
         .portfolio-video-thumbnail {
             width: 100%;
@@ -234,6 +231,12 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
+        }
+
+        /* YouTube thumbnail via CSS background */
+        .portfolio-video-thumbnail.yt-thumb {
+            background-size: cover;
+            background-position: center;
         }
  
         .portfolio-item:hover .portfolio-video-thumbnail {
@@ -278,7 +281,7 @@
             letter-spacing: 2px;
         }
  
-        /* Modal */
+        /* Modal (shared base) */
         .modal {
             display: none;
             position: fixed;
@@ -517,23 +520,10 @@
             scroll-behavior: smooth;
         }
  
-        .thumbnails-scroll::-webkit-scrollbar {
-            height: 8px;
-        }
- 
-        .thumbnails-scroll::-webkit-scrollbar-track {
-            background: #222;
-            border-radius: 4px;
-        }
- 
-        .thumbnails-scroll::-webkit-scrollbar-thumb {
-            background: #555;
-            border-radius: 4px;
-        }
- 
-        .thumbnails-scroll::-webkit-scrollbar-thumb:hover {
-            background: #777;
-        }
+        .thumbnails-scroll::-webkit-scrollbar { height: 8px; }
+        .thumbnails-scroll::-webkit-scrollbar-track { background: #222; border-radius: 4px; }
+        .thumbnails-scroll::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
+        .thumbnails-scroll::-webkit-scrollbar-thumb:hover { background: #777; }
  
         .video-thumbnail {
             flex: 0 0 180px;
@@ -550,9 +540,7 @@
             transform: translateY(-5px);
         }
  
-        .video-thumbnail.active {
-            border-color: #4ecdc4;
-        }
+        .video-thumbnail.active { border-color: #4ecdc4; }
  
         .thumbnail-container {
             position: relative;
@@ -665,13 +653,8 @@
             transition: all 0.4s ease;
         }
  
-        .service-box:hover .service-box-text {
-            opacity: 1;
-        }
- 
-        .service-box:hover h3 {
-            opacity: 0;
-        }
+        .service-box:hover .service-box-text { opacity: 1; }
+        .service-box:hover h3 { opacity: 0; }
  
         .service-box-text p {
             color: #cccccc;
@@ -758,9 +741,7 @@
             margin-bottom: 4rem;
         }
  
-        .contact-item {
-            text-align: center;
-        }
+        .contact-item { text-align: center; }
  
         .contact-item h4 {
             font-size: 1rem;
@@ -809,9 +790,7 @@
             margin-bottom: 1.5rem;
         }
  
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+        .form-group { margin-bottom: 1.5rem; }
  
         .form-group input,
         .form-group textarea {
@@ -834,9 +813,7 @@
         }
  
         .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #888888;
-        }
+        .form-group textarea::placeholder { color: #888888; }
  
         .form-group textarea {
             resize: vertical;
@@ -850,9 +827,7 @@
             color: #4ecdc4;
         }
  
-        #formStatus.error {
-            color: #ff6b6b;
-        }
+        #formStatus.error { color: #ff6b6b; }
  
         /* Cookie Consent Banner */
         .cookie-consent {
@@ -868,9 +843,7 @@
             display: none;
         }
  
-        .cookie-consent.show {
-            display: block;
-        }
+        .cookie-consent.show { display: block; }
  
         .cookie-content {
             max-width: 1200px;
@@ -888,19 +861,10 @@
             line-height: 1.6;
         }
  
-        .cookie-text a {
-            color: #4ecdc4;
-            text-decoration: underline;
-        }
+        .cookie-text a { color: #4ecdc4; text-decoration: underline; }
+        .cookie-text a:hover { color: #ffffff; }
  
-        .cookie-text a:hover {
-            color: #ffffff;
-        }
- 
-        .cookie-buttons {
-            display: flex;
-            gap: 1rem;
-        }
+        .cookie-buttons { display: flex; gap: 1rem; }
  
         .cookie-button {
             padding: 0.75rem 1.5rem;
@@ -915,10 +879,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
  
-        .cookie-button:hover {
-            background: #ffffff;
-            color: #000000;
-        }
+        .cookie-button:hover { background: #ffffff; color: #000000; }
  
         .cookie-button.accept {
             background: #4ecdc4;
@@ -958,295 +919,68 @@
  
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
- 
-            .logo {
-                font-size: 1.3rem;
-            }
- 
-            .nav-links {
-                display: none;
-            }
- 
-            .hero {
-                height: 70vh;
-            }
- 
-            .brands {
-                padding: 3rem 0;
-            }
- 
-            .brands-title {
-                font-size: 0.85rem;
-                margin-bottom: 2rem;
-            }
- 
-            .brand-logo {
-                height: 40px;
-                min-width: 80px;
-            }
- 
-            .contact-info {
-                flex-direction: column;
-                gap: 2rem;
-            }
- 
-            .portfolio {
-                padding: 3rem 0;
-            }
- 
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
- 
-            .services-boxes {
-                grid-template-columns: 1fr;
-            }
- 
-            .service-box {
-                min-height: 350px;
-            }
- 
-            .services {
-                padding: 4rem 0;
-            }
- 
-            .services h2,
-            .about h2,
-            .contact h2 {
-                font-size: 2rem;
-            }
- 
-            .what-we-do-intro p {
-                font-size: 1rem;
-            }
- 
-            .about {
-                padding: 4rem 0;
-            }
- 
-            .contact {
-                padding: 4rem 0;
-            }
- 
-            .contact-subtitle {
-                font-size: 1rem;
-            }
- 
-            .unmute-button {
-                bottom: 1.5rem;
-                right: 1rem;
-                width: 45px;
-                height: 45px;
-                font-size: 1rem;
-            }
- 
-            .modal-content {
-                padding: 1rem;
-                margin: 0.5rem;
-                width: 98%;
-                overflow-y: auto;
-                max-height: 95vh;
-            }
- 
-            .modal-close {
-                top: 0.5rem;
-                right: 0.5rem;
-                font-size: 2.5rem;
-            }
- 
-            .modal-layout {
-                flex-direction: column;
-                gap: 1.5rem;
-                max-height: none;
-            }
- 
-            .modal-layout:not(.horizontal) .modal-video-wrapper {
-                max-width: 100%;
-            }
- 
-            .modal-video-container.vertical {
-                padding-bottom: 0;
-                height: 75vh;
-                max-height: 75vh;
-                position: relative;
-                overflow: hidden;
-            }
- 
-            .modal-video-container.vertical iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
- 
-            .series-main-video-container {
-                padding-bottom: 0;
-                height: 75vh;
-                max-height: 75vh;
-                position: relative;
-                overflow: hidden;
-            }
- 
-            .series-main-video-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
- 
-            .modal-info {
-                flex: 1;
-                margin-top: 0;
-            }
- 
-            .modal-info h2 {
-                font-size: 1.8rem;
-            }
- 
-            .modal-info p {
-                font-size: 0.95rem;
-            }
- 
-            .modal-description {
-                font-size: 0.9rem;
-            }
- 
-            .series-modal-layout {
-                flex-direction: column;
-                gap: 1.5rem;
-                max-height: none;
-            }
- 
-            .series-video-main {
-                max-width: 100%;
-            }
- 
-            .series-main-video-container {
-                max-height: none;
-            }
- 
-            .series-info {
-                flex: 1;
-            }
- 
-            .series-info h2 {
-                font-size: 1.8rem;
-            }
- 
-            .series-info .series-subtitle {
-                font-size: 0.95rem;
-            }
- 
-            .series-info .series-description {
-                font-size: 0.9rem;
-            }
- 
-            .video-thumbnail {
-                flex: 0 0 140px;
-            }
- 
-            .thumbnail-title {
-                font-size: 0.75rem;
-                padding: 0.6rem;
-            }
- 
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
- 
-            .contact-form-container {
-                margin-top: 2rem;
-            }
- 
-            .form-group input,
-            .form-group textarea {
-                font-size: 16px;
-            }
- 
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-                padding: 0.5rem;
-            }
- 
-            .cookie-text {
-                font-size: 0.85rem;
-            }
- 
-            .cookie-buttons {
-                width: 100%;
-                flex-direction: column;
-            }
- 
-            .cookie-button {
-                width: 100%;
-            }
- 
-            footer {
-                padding: 2rem 0;
-            }
- 
-            .footer-content {
-                font-size: 0.8rem;
-            }
- 
-            .footer-content p {
-                margin-bottom: 0.5rem;
-            }
+            .container { padding: 0 1rem; }
+            .logo { font-size: 1.3rem; }
+            .nav-links { display: none; }
+            .hero { height: 70vh; }
+            .brands { padding: 3rem 0; }
+            .brands-title { font-size: 0.85rem; margin-bottom: 2rem; }
+            .brand-logo { height: 40px; min-width: 80px; }
+            .contact-info { flex-direction: column; gap: 2rem; }
+            .portfolio { padding: 3rem 0; }
+            .portfolio-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .services-boxes { grid-template-columns: 1fr; }
+            .service-box { min-height: 350px; }
+            .services { padding: 4rem 0; }
+            .services h2, .about h2, .contact h2 { font-size: 2rem; }
+            .what-we-do-intro p { font-size: 1rem; }
+            .about { padding: 4rem 0; }
+            .contact { padding: 4rem 0; }
+            .contact-subtitle { font-size: 1rem; }
+            .unmute-button { bottom: 1.5rem; right: 1rem; width: 45px; height: 45px; font-size: 1rem; }
+            .modal-content { padding: 1rem; margin: 0.5rem; width: 98%; overflow-y: auto; max-height: 95vh; }
+            .modal-close { top: 0.5rem; right: 0.5rem; font-size: 2.5rem; }
+            .modal-layout { flex-direction: column; gap: 1.5rem; max-height: none; }
+            .modal-layout:not(.horizontal) .modal-video-wrapper { max-width: 100%; }
+            .modal-video-container.vertical { padding-bottom: 0; height: 75vh; max-height: 75vh; position: relative; overflow: hidden; }
+            .modal-video-container.vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+            .series-main-video-container { padding-bottom: 0; height: 75vh; max-height: 75vh; position: relative; overflow: hidden; }
+            .series-main-video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+            .modal-info { flex: 1; margin-top: 0; }
+            .modal-info h2 { font-size: 1.8rem; }
+            .modal-info p { font-size: 0.95rem; }
+            .modal-description { font-size: 0.9rem; }
+            .series-modal-layout { flex-direction: column; gap: 1.5rem; max-height: none; }
+            .series-video-main { max-width: 100%; }
+            .series-info { flex: 1; }
+            .series-info h2 { font-size: 1.8rem; }
+            .series-info .series-subtitle { font-size: 0.95rem; }
+            .series-info .series-description { font-size: 0.9rem; }
+            .video-thumbnail { flex: 0 0 140px; }
+            .thumbnail-title { font-size: 0.75rem; padding: 0.6rem; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .contact-form-container { margin-top: 2rem; }
+            .form-group input, .form-group textarea { font-size: 16px; }
+            .cookie-content { flex-direction: column; text-align: center; padding: 0.5rem; }
+            .cookie-text { font-size: 0.85rem; }
+            .cookie-buttons { width: 100%; flex-direction: column; }
+            .cookie-button { width: 100%; }
+            footer { padding: 2rem 0; }
+            .footer-content { font-size: 0.8rem; }
+            .footer-content p { margin-bottom: 0.5rem; }
         }
  
-        /* Extra small phones */
         @media (max-width: 480px) {
-            .logo {
-                font-size: 1.1rem;
-            }
- 
-            nav {
-                padding: 1rem 0;
-            }
- 
-            .hero {
-                height: 60vh;
-            }
- 
-            .brand-logo {
-                height: 35px;
-                min-width: 70px;
-            }
- 
-            .portfolio-item {
-                aspect-ratio: 1;
-            }
- 
-            .services h2,
-            .about h2,
-            .contact h2 {
-                font-size: 1.75rem;
-            }
- 
-            .modal-info h2,
-            .series-info h2 {
-                font-size: 1.5rem;
-            }
- 
-            .service-box {
-                min-height: 300px;
-            }
- 
-            .service-box h3 {
-                font-size: 1.5rem;
-            }
- 
-            .service-box-text p {
-                font-size: 0.9rem;
-            }
+            .logo { font-size: 1.1rem; }
+            nav { padding: 1rem 0; }
+            .hero { height: 60vh; }
+            .brand-logo { height: 35px; min-width: 70px; }
+            .portfolio-item { aspect-ratio: 1; }
+            .services h2, .about h2, .contact h2 { font-size: 1.75rem; }
+            .modal-info h2, .series-info h2 { font-size: 1.5rem; }
+            .service-box { min-height: 300px; }
+            .service-box h3 { font-size: 1.5rem; }
+            .service-box-text p { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -1322,8 +1056,19 @@
     <!-- Portfolio Section -->
     <section class="portfolio" id="work">
         <div class="portfolio-grid">
- 
-            <!-- 1. Kevin Cool Release Party (NEW) -->
+
+            <!-- 1. Asking Ukrainians (Documentary) — YouTube -->
+            <div class="portfolio-item fade-in" onclick="openYouTubeModal('TapJuWZDrG4', 'Asking Ukrainians: What war really does to people', 'Documentary', 'In April 2026 Jasmin Thoma traveled to Ukraine to interview people about how the war affects their mental health. She discussed issues such as trauma, stress, exhaustion or anxiety. This project aims to reveal what war really does to people thereby letting those affected speak for themselves.')">
+                <div class="portfolio-video-thumbnail yt-thumb" style="background-image: url('images/docu-thumb.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>Asking Ukrainians</h3>
+                        <p>Documentary</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Kevin Cool Release Party -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1183169391', 'Kevin Cool', 'Event Coverage', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1183169391?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1336,7 +1081,7 @@
                 </div>
             </div>
  
-            <!-- 2. Dionysos Festival -->
+            <!-- 3. Dionysos Festival -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131292999', 'Dionysos Festival', 'Event Coverage', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131292999?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1349,7 +1094,7 @@
                 </div>
             </div>
  
-            <!-- 3. Ariella Zeitlin -->
+            <!-- 4. Ariella Zeitlin -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131292015', 'Ariella Zeitlin', 'Concert Production', true, 'Multi-camera concert documentation for violinist Ariella Zeitlin\'s performance in Vienna. Coordinated a three-camera setup with dedicated photography to capture both intimate performance moments and the broader concert atmosphere.<br><br><strong>Credits:</strong><br>1st Camera: Emil Skvirsky<br>2nd Camera: Tareq El Hadi<br>Photographer: Rod Mambakasa')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131292015?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1362,7 +1107,7 @@
                 </div>
             </div>
  
-            <!-- 4. Zwidemu -->
+            <!-- 5. Zwidemu -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131291509', 'Zwidemu', 'Event Coverage', true, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291509?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1375,7 +1120,7 @@
                 </div>
             </div>
  
-            <!-- 5. Auriga - Vivisol -->
+            <!-- 6. Auriga - Vivisol -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131291022', 'Auriga - Vivisol', 'Real Estate', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291022?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1388,7 +1133,7 @@
                 </div>
             </div>
  
-            <!-- 6. Auriga - Fertistream -->
+            <!-- 7. Auriga - Fertistream -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131289219', 'Auriga - Fertistream', 'Real Estate', false, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131289219?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1401,7 +1146,7 @@
                 </div>
             </div>
  
-            <!-- 7. Schijt Situatie -->
+            <!-- 8. Schijt Situatie -->
             <div class="portfolio-item fade-in" onclick="openSeriesModal()">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1414,7 +1159,7 @@
                 </div>
             </div>
  
-            <!-- 8. Konsens -->
+            <!-- 9. Konsens -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131291969', 'Konsens', 'Event Teaser', true, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131291969?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1427,7 +1172,7 @@
                 </div>
             </div>
  
-            <!-- 9. DJ Gorgo -->
+            <!-- 10. DJ Gorgo -->
             <div class="portfolio-item fade-in" onclick="openVideoModal('1131289101', 'DJ Gorgo', 'Rebranding', true, '')">
                 <div class="portfolio-video-thumbnail">
                     <iframe src="https://player.vimeo.com/video/1131289101?badge=0&title=0&byline=0&portrait=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -1443,20 +1188,37 @@
         </div>
     </section>
  
-    <!-- Single Video Modal -->
+    <!-- Single Video Modal (Vimeo) -->
     <div id="videoModal" class="modal">
         <span class="modal-close" onclick="closeVideoModal()">&times;</span>
         <div class="modal-content">
             <div id="modalLayout" class="modal-layout">
                 <div id="modalVideoWrapper" class="modal-video-wrapper">
-                    <div id="modalVideoContainer" class="modal-video-container">
-                        <!-- Video will be loaded here -->
-                    </div>
+                    <div id="modalVideoContainer" class="modal-video-container"></div>
                 </div>
                 <div id="modalInfo" class="modal-info">
                     <h2 id="modalTitle"></h2>
                     <p id="modalCategory"></p>
                     <div id="modalDescription" class="modal-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Modal -->
+    <div id="youtubeModal" class="modal">
+        <span class="modal-close" onclick="closeYouTubeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="modal-layout horizontal">
+                <div class="modal-video-wrapper">
+                    <div id="ytVideoContainer" class="modal-video-container">
+                        <!-- YouTube iframe loaded here -->
+                    </div>
+                </div>
+                <div class="modal-info" style="text-align: center;">
+                    <h2 id="ytModalTitle"></h2>
+                    <p id="ytModalCategory"></p>
+                    <div id="ytModalDescription" class="modal-description"></div>
                 </div>
             </div>
         </div>
@@ -1518,7 +1280,6 @@
                 <h2>What We Do</h2>
                 <p>We turn ideas into visuals that stick. From the first concept to the final edit, we handle every step of the process, creating work that feels alive and true to your brand and vision.</p>
             </div>
-            
             <div class="services-boxes">
                 <div class="service-box fade-in">
                     <div class="service-box-content">
@@ -1529,7 +1290,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="service-box fade-in">
                     <div class="service-box-content">
                         <h3>Creative Concepts</h3>
@@ -1580,7 +1340,6 @@
         <div class="container">
             <h2 class="fade-in">Let's Create Something Together</h2>
             <p class="contact-subtitle fade-in">Ready to tell your story? Get in touch and let's discuss your next project.</p>
-            
             <div class="contact-info fade-in">
                 <div class="contact-item">
                     <h4>Location</h4>
@@ -1595,7 +1354,6 @@
                     <p>+43 677 63502585</p>
                 </div>
             </div>
- 
             <div class="contact-form-container fade-in">
                 <form id="contactForm" action="https://formspree.io/f/xpworzql" method="POST">
                     <div class="form-row">
@@ -1623,7 +1381,7 @@
     <div class="cookie-consent" id="cookieConsent">
         <div class="cookie-content">
             <div class="cookie-text">
-                Diese Website verwendet keine Tracking-Cookies. Wir nutzen lediglich technisch notwendige Funktionen für das Kontaktformular. 
+                Diese Website verwendet keine Tracking-Cookies. Wir nutzen lediglich technisch notwendige Funktionen für das Kontaktformular.
                 Weitere Informationen finden Sie in unserer <a href="privacy.html">Datenschutzerklärung</a>.
             </div>
             <div class="cookie-buttons">
@@ -1647,19 +1405,15 @@
  
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
-        // Vimeo Player for hero video
+        // Vimeo hero player
         let heroPlayer;
         let isMuted = true;
- 
-        // Initialize Vimeo player
+
         setTimeout(() => {
             const iframe = document.querySelector('#vimeoPlayer');
-            if (iframe) {
-                heroPlayer = new Vimeo.Player(iframe);
-            }
+            if (iframe) heroPlayer = new Vimeo.Player(iframe);
         }, 1000);
- 
-        // Toggle mute function
+
         function toggleMute() {
             if (heroPlayer) {
                 if (isMuted) {
@@ -1674,18 +1428,15 @@
                 }
             }
         }
- 
-        // Single video modal functions
-        function openVideoModal(videoId, title, category, isVertical, description = '') {
+
+        // Vimeo modal
+        function openVideoModal(videoId, title, category, isVertical, description) {
             const modal = document.getElementById('videoModal');
             const layout = document.getElementById('modalLayout');
             const wrapper = document.getElementById('modalVideoWrapper');
             const container = document.getElementById('modalVideoContainer');
             const info = document.getElementById('modalInfo');
-            const titleEl = document.getElementById('modalTitle');
-            const categoryEl = document.getElementById('modalCategory');
-            const descriptionEl = document.getElementById('modalDescription');
- 
+
             if (isVertical) {
                 layout.classList.remove('horizontal');
                 wrapper.classList.remove('horizontal');
@@ -1697,158 +1448,119 @@
                 info.classList.add('horizontal');
                 container.classList.remove('vertical');
             }
- 
-            const iframeHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-            container.innerHTML = iframeHTML;
-            
-            titleEl.textContent = title;
-            categoryEl.textContent = category;
-            descriptionEl.innerHTML = description;
- 
+
+            container.innerHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalCategory').textContent = category;
+            document.getElementById('modalDescription').innerHTML = description || '';
+
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
- 
+
         function closeVideoModal() {
             const modal = document.getElementById('videoModal');
-            const container = document.getElementById('modalVideoContainer');
-            
-            const iframes = container.getElementsByTagName('iframe');
-            for (let i = 0; i < iframes.length; i++) {
-                iframes[i].src = '';
-            }
-            
-            container.innerHTML = '';
+            document.getElementById('modalVideoContainer').innerHTML = '';
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
- 
-        // Series modal functions
+
+        // YouTube modal
+        function openYouTubeModal(videoId, title, category, description) {
+            const modal = document.getElementById('youtubeModal');
+            const container = document.getElementById('ytVideoContainer');
+
+            container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+            document.getElementById('ytModalTitle').textContent = title;
+            document.getElementById('ytModalCategory').textContent = category;
+            document.getElementById('ytModalDescription').textContent = description || '';
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeYouTubeModal() {
+            const modal = document.getElementById('youtubeModal');
+            document.getElementById('ytVideoContainer').innerHTML = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Series modal
         function openSeriesModal() {
             document.getElementById('seriesModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
- 
+
         function closeSeriesModal() {
             const modal = document.getElementById('seriesModal');
             const container = document.getElementById('seriesMainVideo');
-            
-            const iframes = container.getElementsByTagName('iframe');
-            for (let i = 0; i < iframes.length; i++) {
-                iframes[i].src = '';
-            }
-            
             container.innerHTML = '<iframe src="https://player.vimeo.com/video/1131293063?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
-            
-            const thumbnails = document.querySelectorAll('.video-thumbnail');
-            thumbnails.forEach((thumb, i) => {
-                if (i === 0) {
-                    thumb.classList.add('active');
-                } else {
-                    thumb.classList.remove('active');
-                }
+            document.querySelectorAll('.video-thumbnail').forEach((t, i) => {
+                t.classList.toggle('active', i === 0);
             });
             document.getElementById('seriesCurrentTitle').textContent = 'When Nature Calls - Desert';
         }
- 
+
         function changeSeriesVideo(videoId, title, index) {
-            const container = document.getElementById('seriesMainVideo');
-            const titleEl = document.getElementById('seriesCurrentTitle');
-            
-            container.innerHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-            
-            titleEl.textContent = title;
-            
-            const thumbnails = document.querySelectorAll('.video-thumbnail');
-            thumbnails.forEach((thumb, i) => {
-                if (i === index) {
-                    thumb.classList.add('active');
-                } else {
-                    thumb.classList.remove('active');
-                }
+            document.getElementById('seriesMainVideo').innerHTML = `<iframe src="https://player.vimeo.com/video/${videoId}?badge=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            document.getElementById('seriesCurrentTitle').textContent = title;
+            document.querySelectorAll('.video-thumbnail').forEach((t, i) => {
+                t.classList.toggle('active', i === index);
             });
         }
- 
-        // Close modals when clicking outside
+
+        // Close modals on backdrop click
         window.onclick = function(event) {
-            const videoModal = document.getElementById('videoModal');
-            const seriesModal = document.getElementById('seriesModal');
-            if (event.target == videoModal) {
-                closeVideoModal();
-            }
-            if (event.target == seriesModal) {
-                closeSeriesModal();
-            }
+            if (event.target == document.getElementById('videoModal')) closeVideoModal();
+            if (event.target == document.getElementById('youtubeModal')) closeYouTubeModal();
+            if (event.target == document.getElementById('seriesModal')) closeSeriesModal();
         }
- 
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
- 
+
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 100);
         });
- 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
- 
+
+        // Fade in on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        }, observerOptions);
- 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
- 
-        // Contact Form Handling
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Contact form
         const form = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
- 
         if (form) {
-            form.addEventListener('submit', function(e) {
-                const submitButton = form.querySelector('button[type="submit"]');
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
+            form.addEventListener('submit', function() {
+                const btn = form.querySelector('button[type="submit"]');
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
             });
         }
- 
-        // Cookie Consent Banner
+
+        // Cookie consent
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
             document.getElementById('cookieConsent').classList.remove('show');
         }
- 
+
         window.addEventListener('load', function() {
-            const cookieConsent = localStorage.getItem('cookieConsent');
-            if (!cookieConsent) {
-                setTimeout(function() {
-                    document.getElementById('cookieConsent').classList.add('show');
-                }, 1000);
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => document.getElementById('cookieConsent').classList.add('show'), 1000);
             }
         });
     </script>
