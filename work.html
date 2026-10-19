@@ -766,6 +766,7 @@
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+            try { if (!(history.state && history.state.vm)) history.pushState({ vm: 1 }, ''); } catch (e) {}
         }
 
 document.addEventListener('click', function (e) {
@@ -779,12 +780,23 @@ document.addEventListener('click', function (e) {
             if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
 
-                function closeVideoModal() {
+        function closeVideoModal() {
+            // If the popup added a history entry, go back so the entry is removed; popstate then closes it.
+            if (history.state && history.state.vm) { history.back(); return; }
+            hideVideoModal();
+        }
+
+        function hideVideoModal() {
             const modal = document.getElementById('videoModal');
             document.getElementById('modalVideoContainer').innerHTML = '';
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
+
+        // Phone/browser Back button closes the popup instead of leaving the page
+        window.addEventListener('popstate', function () {
+            if (document.getElementById('videoModal').classList.contains('active')) hideVideoModal();
+        });
 
         // Close modals on backdrop click
         window.onclick = function(event) {
