@@ -464,23 +464,41 @@
         .contact-text p { color: var(--text-2); font-size: 1.05rem; line-height: 1.75; font-weight: 400; margin-bottom: 1.1rem; }
         .contact-text .contact-subtitle { font-size: 1.2rem; color: #fff; margin: 1.6rem 0 0; }
     
-        /* Red Bull photo block (hidden page) */
-        .project.photos { display: block; }
-        .project.photos .project-text { max-width: 44rem; }
-        .photo-facts p { font-size: 1.02rem; line-height: 1.6; color: var(--text-2); margin-bottom: 0.7rem; max-width: 36rem; }
-        .photo-facts b { display: block; font-family: var(--font-head); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 0.15rem; }
-        a.see-more { display: inline-block; text-decoration: none; margin-top: 0.8rem; }
-        .photo-strip { display: flex; gap: 0.9rem; overflow-x: auto; scroll-snap-type: x mandatory; margin-top: 2.2rem; padding-bottom: 0.8rem; -webkit-overflow-scrolling: touch; }
-        .photo-strip .ph { flex: none; height: clamp(300px, 46vw, 520px); padding: 0; border: 0; background: #000; border-radius: 14px; overflow: hidden; cursor: zoom-in; scroll-snap-align: start; }
-        .photo-strip img { display: block; height: 100%; width: auto; }
-        #photoBox { position: fixed; inset: 0; z-index: 1200; background: rgba(0,0,0,0.94); display: none; align-items: center; justify-content: center; }
-        #photoBox.active { display: flex; }
-        #photoBox img { max-width: 94vw; max-height: 88vh; object-fit: contain; }
-        #photoBox button { position: absolute; background: none; border: 0; color: #fff; font-size: 2.4rem; line-height: 1; cursor: pointer; padding: 0.6rem 1rem; }
-        #photoBox .pb-close { top: 0.6rem; right: 0.8rem; }
-        #photoBox .pb-prev { left: 0.4rem; top: 50%; transform: translateY(-50%); }
-        #photoBox .pb-next { right: 0.4rem; top: 50%; transform: translateY(-50%); }
-        #photoBox .pb-count { position: absolute; bottom: 1rem; left: 0; right: 0; text-align: center; color: #bbb; font-size: 0.9rem; }
+        /* Red Bull photo series (hidden page) */
+        .photoset-media { display: flex; gap: 1.4rem; align-items: flex-start; }
+        .pstage { position: relative; width: 360px; max-width: 100%; aspect-ratio: 2 / 3; border-radius: 16px; overflow: hidden; background: #141414; cursor: zoom-in; isolation: isolate; box-shadow: 0 20px 50px -25px rgba(0,0,0,0.9); flex: none; }
+        .pstage img { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .pstage .pmain { object-fit: contain; z-index: 1; }
+        .pstage .pbg { object-fit: cover; transform: scale(1.25); filter: blur(26px) brightness(0.5) saturate(1.2); z-index: 0; }
+        .pstage .now { position: absolute; left: 10px; top: 8px; z-index: 3; font-family: var(--font-head); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.58rem; background: rgba(0,0,0,0.65); padding: 0.28rem 0.55rem; border-radius: 4px; color: #fff; }
+        .prail { display: grid; grid-template-columns: repeat(2, 58px); gap: 0.45rem; flex: none; }
+        .pt { all: unset; box-sizing: border-box; display: block; cursor: pointer; aspect-ratio: 3 / 4; border-radius: 9px; overflow: hidden; background: #141414; opacity: 0.55; border: 2px solid transparent; transition: opacity 0.25s ease, border-color 0.25s ease; }
+        .pt img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .pt:hover { opacity: 0.85; }
+        .pt.on { opacity: 1; border-color: var(--accent); }
+        .pt:focus-visible, .pstage:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        .photoset .eyebrow { display: inline-flex; gap: 0.7rem; align-items: center; font-family: var(--font-head); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.74rem; color: var(--accent); margin-bottom: 1.1rem; }
+        .photoset .eyebrow i { display: inline-block; width: 2.2rem; height: 2px; background: var(--accent); }
+        .project-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+        a.see-more { display: inline-block; text-decoration: none; }
+        a.see-more.ghost { background: transparent; border: 2px solid #fff; color: #fff; padding: 0.75rem 1.5rem; }
+        a.see-more.ghost:hover { background: #fff; color: #000; transform: translateY(-2px); }
+        .project:nth-child(even) .photoset-media { order: 2; }
+        .photoset-media, .photoset .project-text { min-width: 0; }
+        .detail-block a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+        @media (max-width: 860px) {
+            .project.photoset, .project.photoset:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
+            .project:nth-child(even) .photoset-media { order: 0; }
+            .photoset-media { flex-direction: column; align-items: center; width: 100%; }
+            .pstage { width: 100%; max-width: 420px; }
+            .prail { display: flex; width: 100%; max-width: 420px; overflow-x: auto; gap: 0.5rem; padding-bottom: 0.3rem; }
+            .pt { flex: none; width: 56px; }
+        }
+        .modal-video-container img.ph-modal { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+        .with-rail .modal-rail.prail { display: grid; grid-template-columns: repeat(2, 58px); gap: 0.45rem; width: auto; justify-content: start; align-content: start; }
+        @media (max-width: 860px) {
+            .with-rail .modal-rail.prail { display: flex; width: 100%; overflow-x: auto; order: -1; }
+        }
 </style>
     <link rel="preload" href="../fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/familjen-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -525,18 +543,6 @@
         <div class="projects">
             <!-- Red Bull (hidden page only) -->
             <article class="project fade-in">
-                <div class="project-media" role="button" tabindex="0" aria-label="Play Red Bull Mobile Experience, Spielberg">
-                    <iframe src="https://player.vimeo.com/video/1249307693?dnt=1&badge=0&title=0&byline=0&portrait=0&controls=0" title="Red Bull Mobile Experience, Spielberg &ndash; Recap video" loading="lazy" frameborder="0" allowfullscreen></iframe>
-                    <span class="play" aria-hidden="true"></span>
-                </div>
-                <div class="project-text">
-                    <h3>Red Bull Mobile Experience, Spielberg</h3>
-                    <p class="project-desc">A recap video of the Red Bull Mobile experience at the race track in Spielberg.</p>
-                    <p class="project-meta"><span><b>Client:</b> Red Bull Mobile AT</span><span><b>Type:</b> Recap video</span></p>
-                    <button type="button" class="see-more" onclick="showDetails('1249307693')">See more &raquo;</button>
-                </div>
-            </article>
-            <article class="project fade-in">
                 <div class="project-media" role="button" tabindex="0" aria-label="Play Red Bull Dance Your Style, behind the scenes">
                     <iframe src="https://player.vimeo.com/video/1249307612?dnt=1&badge=0&title=0&byline=0&portrait=0&controls=0" title="Red Bull Dance Your Style &ndash; Behind the scenes" loading="lazy" frameborder="0" allowfullscreen></iframe>
                     <span class="play" aria-hidden="true"></span>
@@ -548,19 +554,37 @@
                     <button type="button" class="see-more" onclick="showDetails('1249307612')">See more &raquo;</button>
                 </div>
             </article>
-            <article class="project photos fade-in">
+            <article class="project photoset fade-in">
+                <div class="photoset-media">
+                    <div class="pstage" role="button" tabindex="0" aria-label="Open Red Bull BassLine photos">
+                        <img class="pbg" src="img/bassline-01.jpg" alt="">
+                        <img class="pmain" src="img/bassline-01.jpg" alt="Red Bull BassLine, photo 1">
+                        <span class="now">1 / 10</span>
+                    </div>
+                    <div class="prail" role="group" aria-label="Choose a photo"><button type="button" class="pt on" data-i="0" aria-label="Show photo 1"><img src="img/bassline-01-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="1" aria-label="Show photo 2"><img src="img/bassline-02-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="2" aria-label="Show photo 3"><img src="img/bassline-03-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="3" aria-label="Show photo 4"><img src="img/bassline-04-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="4" aria-label="Show photo 5"><img src="img/bassline-05-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="5" aria-label="Show photo 6"><img src="img/bassline-06-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="6" aria-label="Show photo 7"><img src="img/bassline-07-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="7" aria-label="Show photo 8"><img src="img/bassline-08-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="8" aria-label="Show photo 9"><img src="img/bassline-09-t.jpg" alt="" loading="lazy"></button><button type="button" class="pt" data-i="9" aria-label="Show photo 10"><img src="img/bassline-10-t.jpg" alt="" loading="lazy"></button></div>
+                </div>
                 <div class="project-text">
+                    <div class="eyebrow"><i></i>Photo series &middot; 10 photos</div>
                     <h3>Red Bull BassLine</h3>
                     <p class="project-desc">Event photos from Red Bull BassLine, following the influencers invited to promote Red Bull Mobile.</p>
                     <p class="project-meta"><span><b>Client:</b> Red Bull Mobile AT</span><span><b>Type:</b> Event photography</span></p>
-                    <div class="photo-facts">
-                        <p><b>The project</b> Red Bull Mobile invited influencers to the Red Bull BassLine tennis event to promote the brand.</p>
-                        <p><b>What we did</b> We followed the influencers through the event and photographed it, with the focus on the Red Bull Mobile brand and the stickers made for the event.</p>
-                        <p><b>What was delivered</b> A selection of edited photos. Red Bull Mobile used them in an Instagram post.</p>
+                    <div class="project-actions">
+                        <button type="button" class="see-more" onclick="showDetails('ph:bassline')">See more &raquo;</button>
+                        <a class="see-more ghost" href="https://www.instagram.com/p/De4jCM_CIJ7/" target="_blank" rel="noopener noreferrer">Instagram post &rarr;</a>
                     </div>
-                    <a class="see-more" href="https://www.instagram.com/p/De4jCM_CIJ7/" target="_blank" rel="noopener noreferrer">See the Instagram post &rarr;</a>
                 </div>
-                <div class="photo-strip" aria-label="Red Bull BassLine photos"><button type="button" class="ph" data-i="1" aria-label="Open photo 1 of 10"><img src="img/bassline-01.jpg" alt="Red Bull BassLine, photo 1" loading="lazy"></button><button type="button" class="ph" data-i="2" aria-label="Open photo 2 of 10"><img src="img/bassline-02.jpg" alt="Red Bull BassLine, photo 2" loading="lazy"></button><button type="button" class="ph" data-i="3" aria-label="Open photo 3 of 10"><img src="img/bassline-03.jpg" alt="Red Bull BassLine, photo 3" loading="lazy"></button><button type="button" class="ph" data-i="4" aria-label="Open photo 4 of 10"><img src="img/bassline-04.jpg" alt="Red Bull BassLine, photo 4" loading="lazy"></button><button type="button" class="ph" data-i="5" aria-label="Open photo 5 of 10"><img src="img/bassline-05.jpg" alt="Red Bull BassLine, photo 5" loading="lazy"></button><button type="button" class="ph" data-i="6" aria-label="Open photo 6 of 10"><img src="img/bassline-06.jpg" alt="Red Bull BassLine, photo 6" loading="lazy"></button><button type="button" class="ph" data-i="7" aria-label="Open photo 7 of 10"><img src="img/bassline-07.jpg" alt="Red Bull BassLine, photo 7" loading="lazy"></button><button type="button" class="ph" data-i="8" aria-label="Open photo 8 of 10"><img src="img/bassline-08.jpg" alt="Red Bull BassLine, photo 8" loading="lazy"></button><button type="button" class="ph" data-i="9" aria-label="Open photo 9 of 10"><img src="img/bassline-09.jpg" alt="Red Bull BassLine, photo 9" loading="lazy"></button><button type="button" class="ph" data-i="10" aria-label="Open photo 10 of 10"><img src="img/bassline-10.jpg" alt="Red Bull BassLine, photo 10" loading="lazy"></button></div>
+            </article>
+            <article class="project fade-in">
+                <div class="project-media" role="button" tabindex="0" aria-label="Play Red Bull Mobile Experience, Spielberg">
+                    <iframe src="https://player.vimeo.com/video/1249307693?dnt=1&badge=0&title=0&byline=0&portrait=0&controls=0" title="Red Bull Mobile Experience, Spielberg &ndash; Recap video" loading="lazy" frameborder="0" allowfullscreen></iframe>
+                    <span class="play" aria-hidden="true"></span>
+                </div>
+                <div class="project-text">
+                    <h3>Red Bull Mobile Experience, Spielberg</h3>
+                    <p class="project-desc">A recap video of the Red Bull Mobile experience at the race track in Spielberg.</p>
+                    <p class="project-meta"><span><b>Client:</b> Red Bull Mobile AT</span><span><b>Type:</b> Recap video</span></p>
+                    <button type="button" class="see-more" onclick="showDetails('1249307693')">See more &raquo;</button>
+                </div>
             </article>
             <!-- 1. Asking Ukrainians -->
             <article class="project fade-in">
@@ -648,15 +672,6 @@
         </div>
     </div>
 
-
-    <!-- Photo lightbox (Red Bull BassLine) -->
-    <div id="photoBox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-        <button type="button" class="pb-close" aria-label="Close">&times;</button>
-        <button type="button" class="pb-prev" aria-label="Previous photo">&#8249;</button>
-        <img id="pbImg" src="" alt="">
-        <button type="button" class="pb-next" aria-label="Next photo">&#8250;</button>
-        <div class="pb-count" id="pbCount"></div>
-    </div>
 
     <!-- What we do -->
     <section class="about" id="about">
@@ -791,36 +806,59 @@
         // Vimeo modal
 
         // Project details for the See more popup
-        var PROJECT_DETAILS = {"1249307693": {"event": "Red Bull Mobile invited raffle winners to an experience at the race track in Spielberg.", "did": "We followed and documented the raffle winners through the experience, then edited a short, energetic video for social media.", "delivered": "A recap video."}, "1249307612": {"event": "Red Bull&rsquo;s technical team set up the Flycam for the livestream of the Dance Your Style finale at the Gloriette in Sch&ouml;nbrunn.", "did": "We followed the team over two days and documented how they built the Flycam setup for the livestream.", "delivered": "A behind-the-scenes film."}, "yt:TapJuWZDrG4": {"event": "In April 2026, Jasmin Thoma travelled to Ukraine to interview people about how the war affects their mental health, including trauma, stress, exhaustion and anxiety. The documentary lets those affected speak for themselves.", "did": "We edited the documentary.", "delivered": "The finished documentary."}, "1131291022": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Vivisol and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131289219": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Fertistream and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131293063": {"event": "Schijt Situatie (Dutch for “shit situation”) is an ecological toilet paper brand that delivers anywhere in Belgium. The campaign is built around one message: wherever you are, and whenever nature strikes, you can order toilet paper.", "did": "We developed and produced the entire campaign for social media, from concept to final edit. With a product like toilet paper, humour was the natural route, so we wrote the jokes around it while keeping the brand message clear.", "delivered": "The seasonal series “When nature strikes” (Desert, Autumn and Winter) and a separate TV sketch."}};
-        var PROJECT_META = {"1249307693": ["Red Bull Mobile Experience, Spielberg", "Recap video", false], "1249307612": ["Red Bull Dance Your Style, behind the scenes", "Behind the scenes", false], "yt:TapJuWZDrG4": ["Asking Ukrainians", "Documentary", false], "1131291022": ["Auriga – Vivisol", "Finished interior showcase", false], "1131289219": ["Auriga – Fertistream", "Finished interior showcase", false], "1131293063": ["Schijt Situatie", "Advertising campaign", true]};
+        var PROJECT_DETAILS = {"1249307693": {"event": "Red Bull Mobile invited raffle winners to an experience at the race track in Spielberg.", "did": "We followed and documented the raffle winners through the experience, then edited a short, energetic video for social media.", "delivered": "A recap video."}, "1249307612": {"event": "Red Bull&rsquo;s technical team set up the Flycam for the livestream of the Dance Your Style finale at the Gloriette in Sch&ouml;nbrunn.", "did": "We followed the team over two days and documented how they built the Flycam setup for the livestream.", "delivered": "A behind-the-scenes film."}, "yt:TapJuWZDrG4": {"event": "In April 2026, Jasmin Thoma travelled to Ukraine to interview people about how the war affects their mental health, including trauma, stress, exhaustion and anxiety. The documentary lets those affected speak for themselves.", "did": "We edited the documentary.", "delivered": "The finished documentary."}, "1131291022": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Vivisol and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131289219": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Fertistream and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131293063": {"event": "Schijt Situatie (Dutch for “shit situation”) is an ecological toilet paper brand that delivers anywhere in Belgium. The campaign is built around one message: wherever you are, and whenever nature strikes, you can order toilet paper.", "did": "We developed and produced the entire campaign for social media, from concept to final edit. With a product like toilet paper, humour was the natural route, so we wrote the jokes around it while keeping the brand message clear.", "delivered": "The seasonal series “When nature strikes” (Desert, Autumn and Winter) and a separate TV sketch."}, "ph:bassline": {"event": "Red Bull Mobile invited influencers to the Red Bull BassLine tennis event to promote the brand.", "did": "We followed the influencers through the event and photographed it, with the focus on the Red Bull Mobile brand and the stickers made for the event.", "delivered": "A selection of edited photos. Red Bull Mobile used them in an Instagram post.", "link": "https://www.instagram.com/p/De4jCM_CIJ7/"}};
+        var PROJECT_META = {"1249307693": ["Red Bull Mobile Experience, Spielberg", "Recap video", false], "1249307612": ["Red Bull Dance Your Style, behind the scenes", "Behind the scenes", false], "yt:TapJuWZDrG4": ["Asking Ukrainians", "Documentary", false], "1131291022": ["Auriga – Vivisol", "Finished interior showcase", false], "1131289219": ["Auriga – Fertistream", "Finished interior showcase", false], "1131293063": ["Schijt Situatie", "Advertising campaign", true], "ph:bassline": ["Red Bull BassLine", "Event photography", true]};
 
-        // Photo lightbox
+        // Photo series: card behaviour and popup picker
         (function () {
-            var box = document.getElementById('photoBox'), img = document.getElementById('pbImg'), cnt = document.getElementById('pbCount');
-            var btns = Array.prototype.slice.call(document.querySelectorAll('.photo-strip .ph')), cur = 0;
-            function show(i) { cur = (i + btns.length) % btns.length; var im = btns[cur].querySelector('img'); img.src = im.src; img.alt = im.alt; cnt.textContent = (cur + 1) + ' / ' + btns.length; }
-            function open(i) { show(i); box.classList.add('active'); document.body.style.overflow = 'hidden'; }
-            function close() { box.classList.remove('active'); document.body.style.overflow = ''; }
-            btns.forEach(function (b, i) { b.addEventListener('click', function () { open(i); }); });
-            box.querySelector('.pb-close').addEventListener('click', close);
-            box.querySelector('.pb-prev').addEventListener('click', function () { show(cur - 1); });
-            box.querySelector('.pb-next').addEventListener('click', function () { show(cur + 1); });
-            box.addEventListener('click', function (e) { if (e.target === box) close(); });
-            document.addEventListener('keydown', function (e) {
-                if (!box.classList.contains('active')) return;
-                if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(cur - 1); else if (e.key === 'ArrowRight') show(cur + 1);
+            var row = document.querySelector('.photoset'); if (!row) return;
+            var stage = row.querySelector('.pstage'), main = stage.querySelector('.pmain'), bg = stage.querySelector('.pbg'), now = stage.querySelector('.now');
+            var thumbs = Array.prototype.slice.call(row.querySelectorAll('.pt')), current = 0;
+            function file(i) { return 'img/bassline-' + String(i + 1).padStart(2, '0') + '.jpg'; }
+            function show(i) {
+                current = i; main.src = file(i); bg.src = file(i); main.alt = 'Red Bull BassLine, photo ' + (i + 1);
+                now.textContent = (i + 1) + ' / ' + thumbs.length;
+                thumbs.forEach(function (x, k) { x.classList.toggle('on', k === i); });
+            }
+            window.photoSetCurrent = function () { return current; };
+            thumbs.forEach(function (t, i) { t.addEventListener('click', function () { show(i); }); });
+            stage.addEventListener('click', function () { showDetails('ph:bassline'); });
+            stage.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showDetails('ph:bassline'); } });
+            row.addEventListener('keydown', function (e) {
+                if (e.target.closest('.pt') && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) { show((current + (e.key === 'ArrowRight' ? 1 : thumbs.length - 1)) % thumbs.length); }
             });
         })();
+
+        function addPhotoPicker() {
+            var wrapper = document.getElementById('modalVideoWrapper'), container = document.getElementById('modalVideoContainer');
+            var img = container.querySelector('img');
+            var cur = parseInt((img.src.match(/bassline-(\d+)\.jpg/) || [0, 1])[1], 10) - 1;
+            var rail = document.querySelector('.photoset .prail').cloneNode(true);
+            rail.classList.add('modal-rail');
+            var ts = rail.querySelectorAll('.pt');
+            ts.forEach(function (t, i) {
+                t.classList.toggle('on', i === cur);
+                t.addEventListener('click', function () {
+                    img.src = 'img/bassline-' + String(i + 1).padStart(2, '0') + '.jpg'; img.alt = 'Red Bull BassLine, photo ' + (i + 1);
+                    ts.forEach(function (x) { x.classList.remove('on'); }); t.classList.add('on');
+                });
+            });
+            wrapper.classList.add('with-rail');
+            wrapper.appendChild(rail);
+        }
+
         function showDetails(id) {
             var d = PROJECT_DETAILS[id], m = PROJECT_META[id];
             var html = '<div class="detail-block"><h4>The project</h4><div>' + d.event + '</div></div>' +
                        '<div class="detail-block"><h4>What we did</h4><div>' + d.did + '</div></div>' +
                        '<div class="detail-block"><h4>What was delivered</h4><div>' + d.delivered + '</div></div>' +
                        (d.credits ? '<div class="detail-block"><h4>Credits</h4><div>' + d.credits + '</div></div>' : '') +
+                       (d.link ? '<div class="detail-block"><h4>Instagram</h4><div><a href="' + d.link + '" target="_blank" rel="noopener noreferrer">See the post &rarr;</a></div></div>' : '') +
                        '<div class="detail-cta-row"><a href="#contact" class="detail-cta" data-type="' + m[1] + '">Get in touch</a></div>';
             var on = id === '1131293063' && document.querySelector('.campaign .t.on');
             openVideoModal(on ? on.dataset.id : id, m[0], m[1], m[2], html);
             if (id === '1131293063') addCampaignPicker();
+            if (id === 'ph:bassline') addPhotoPicker();
         }
 
         function addCampaignPicker() {
@@ -863,7 +901,12 @@
             }
 
             var src = String(videoId).indexOf("yt:") === 0 ? "https://www.youtube-nocookie.com/embed/" + String(videoId).slice(3) + "?autoplay=1&rel=0" : "https://player.vimeo.com/video/" + videoId + "?dnt=1&badge=0&title=0&byline=0&portrait=0";
-            container.innerHTML = `<iframe src="${src}" title="${title}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            if (String(videoId).indexOf('ph:') === 0) {
+                var pi = window.photoSetCurrent ? window.photoSetCurrent() : 0;
+                container.innerHTML = '<img class="ph-modal" src="img/bassline-' + String(pi + 1).padStart(2, '0') + '.jpg" alt="' + title + ', photo ' + (pi + 1) + '">';
+            } else {
+                container.innerHTML = `<iframe src="${src}" title="${title}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            }
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalCategory').textContent = category;
             document.getElementById('modalDescription').innerHTML = description || '';
