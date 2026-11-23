@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Skiv Productions – Event Videographer Vienna | Music &amp; Brands</title>
+    <meta name="description" content="Skiv Productions is Emil Skvirsky, a videographer in Vienna. Aftermovies and event videos for music, and video production for brands and companies.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Skiv Productions">
+    <meta property="og:title" content="Skiv Productions – Event Videographer Vienna | Music &amp; Brands">
+    <meta property="og:description" content="Skiv Productions is Emil Skvirsky, a videographer in Vienna. Aftermovies and event videos for music, and video production for brands and companies.">
+    <meta property="og:image" content="https://skivproductions.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cut through the noise – Skiv Productions">
+    <meta property="og:locale" content="en">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Skiv Productions – Event Videographer Vienna | Music &amp; Brands">
+    <meta name="twitter:description" content="Skiv Productions is Emil Skvirsky, a videographer in Vienna. Aftermovies and event videos for music, and video production for brands and companies.">
+    <meta name="twitter:image" content="https://skivproductions.com/images/og-image.jpg">
+    <style>
+        /* Fonts (self-hosted) */
+        @font-face { font-family: 'Inter Tight'; src: url('../fonts/inter-tight-latin-wght-normal.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Familjen Grotesk'; src: url('../fonts/familjen-grotesk-latin-wght-normal.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
+        :root { --font-head: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; --font-body: 'Familjen Grotesk', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent: #c40000;
+            --ease: cubic-bezier(0.77, 0, 0.18, 1);
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: #000000;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        /* Wordmark */
+        .wordmark {
+            position: fixed;
+            top: 2rem;
+            left: 2.5rem;
+            z-index: 10;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Split */
+        .split {
+            position: relative;
+            display: flex;
+            height: 100vh;
+            height: 100dvh;
+            width: 100%;
+        }
+
+        .half {
+            position: relative;
+            flex: 1 1 0;
+            min-width: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 3rem 5rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: flex-grow 0.8s var(--ease);
+        }
+
+        .half--brands {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .half--music {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .half > .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .half--brands > .content {
+            align-items: flex-start;
+        }
+
+        .half--music > .content {
+            align-items: flex-end;
+        }
+
+        /* Both halves: a dark field with a soft glow that follows the cursor */
+        .half::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(520px circle at var(--mx, 30%) var(--my, 40%), rgba(196, 0, 0, 0.16), transparent 60%),
+                linear-gradient(160deg, #0a0a0a, #161616);
+        }
+
+        /* Text */
+        .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            white-space: nowrap;
+        }
+
+        .half h2 {
+            font-size: clamp(2.4rem, 5.6vw, 6.5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            color: rgba(255, 255, 255, 0.78);
+            transition: color 0.4s ease, letter-spacing 0.6s var(--ease);
+        }
+
+        .half h2::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 0;
+            margin-top: 1rem;
+            background: var(--accent);
+            transition: width 0.6s var(--ease);
+        }
+
+        .half--music h2::after {
+            margin-left: auto;
+        }
+
+        .desc {
+            max-width: 26rem;
+            margin-top: 1.4rem;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #cccccc;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.5s ease 0.1s, transform 0.6s var(--ease) 0.1s;
+        }
+
+        .enter {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 1.6rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+        }
+
+        .enter .arrow {
+            display: inline-block;
+            font-size: 1.2rem;
+            letter-spacing: 0;
+            transition: transform 0.5s var(--ease);
+        }
+
+        /* Seam mark */
+        .seam {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 64px;
+            height: 64px;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            pointer-events: none;
+            transition: left 0.8s var(--ease);
+        }
+
+        .seam svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Legal links (Impressum / Datenschutz) */
+        .legal {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 1.2rem;
+            z-index: 10;
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            pointer-events: none;
+        }
+
+        .legal a {
+            pointer-events: auto;
+            color: #888888;
+            text-decoration: none;
+            margin: 0 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .legal a:hover {
+            color: #ffffff;
+        }
+
+        /* Hover reactions (mouse devices, desktop width) */
+        @media (hover: hover) and (min-width: 769px) {
+            .half:hover {
+                flex-grow: 3;
+            }
+
+            .half:hover h2 {
+                color: #ffffff;
+                letter-spacing: 0;
+            }
+
+            .half:hover h2::after {
+                width: 100%;
+            }
+
+            .half:hover .desc {
+                opacity: 1;
+                transform: none;
+            }
+
+            .half:hover .enter {
+                color: var(--accent, #c40000);
+            }
+
+            .half--brands:hover .enter .arrow {
+                transform: translateX(10px);
+            }
+
+            .half--music:hover .enter .arrow {
+                transform: translateX(-10px);
+            }
+
+            .split:has(.half--brands:hover) .seam {
+                left: 75%;
+            }
+
+            .split:has(.half--music:hover) .seam {
+                left: 25%;
+            }
+        }
+
+        /* Touch devices: no hover, so show the descriptions */
+        @media (hover: none) {
+            .desc {
+                opacity: 1;
+                transform: none;
+            }
+
+            .half h2 {
+                color: #ffffff;
+            }
+        }
+
+        /* Mobile: stack the halves */
+        @media (max-width: 768px) {
+            .split {
+                flex-direction: column;
+            }
+
+            .wordmark {
+                top: 1.2rem;
+                left: 1.5rem;
+                font-size: 1.1rem;
+            }
+
+            .half {
+                padding: 0 1.5rem 2.6rem;
+            }
+
+            .half h2 {
+                font-size: clamp(2.2rem, 11vw, 3.5rem);
+            }
+
+            .half h2::after {
+                display: none;
+            }
+
+            .label {
+                margin-bottom: 0.8rem;
+            }
+
+            .desc {
+                opacity: 1;
+                transform: none;
+                margin-top: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .enter {
+                margin-top: 1rem;
+            }
+
+            .legal {
+                bottom: 0.7rem;
+            }
+
+            .seam {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+            }
+        }
+    
+        /* Heading font: Inter Tight, body: Familjen Grotesk */
+        h1, h2, h3, h4, b, strong, .logo, .wordmark, .label, .nav-links a, .enter,
+        .brands-title, .thumbnail-title, .series-current-title, .series-subtitle,
+        .cta-button, .unmute-button, .cookie-button { font-family: var(--font-head); }
+    
+        /* ============ POLISH ============ */
+        @view-transition { navigation: auto; }
+        :root { --bg: #0a0a0a; }
+        body { background: var(--bg); -webkit-font-smoothing: antialiased; animation: pageIn 0.6s var(--ease) both; }
+        @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+        .wordmark { font-size: 1.3rem; letter-spacing: 2px; }
+        .label { font-weight: 600; color: #c4c4c4; }
+        .desc { font-weight: 400; color: #c4c4c4; }
+        .half h2 { font-weight: 800; }
+        .legal a { color: #8f8f8f; }
+        a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+        ::selection { background: var(--accent); color: #fff; }
+        .half h2, .half .desc { transition-property: color, letter-spacing, font-size, opacity, transform; }
+        @media (hover: hover) and (min-width: 769px) {
+            /* the side you are not on shrinks its headline so it stays readable instead of being cut off */
+            .split:has(.half:hover) .half:not(:hover) h2 { font-size: clamp(1.4rem, 2.3vw, 2.6rem); }
+            .split:has(.half:hover) .half:not(:hover) .label { opacity: 0.6; }
+            .half h2 { transition: color 0.4s ease, letter-spacing 0.6s var(--ease), font-size 0.8s var(--ease); }
+        }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; } }
+    </style>
+    <link rel="preload" href="../fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/familjen-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+    <link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
+    <link rel="preconnect" href="https://f.vimeocdn.com" crossorigin>
+    <link rel="prefetch" href="../work.html">
+    <link rel="prefetch" href="brands.html">
+</head>
+<body>
+    <h1 class="sr-only">Skiv Productions – videographer in Vienna for music and brands</h1>
+
+    <a href="index.html" class="wordmark">SKIV PRODUCTIONS</a>
+
+    <main class="split">
+        <a href="brands.html" class="half half--brands" aria-label="For brands: video production for companies in Vienna">
+            <div class="content">
+                <div class="label">01 / For brands</div>
+                <h2>For brands.</h2>
+                <p class="desc">Campaigns, branded content and commercials.</p>
+                <div class="enter">Enter <span class="arrow">&rarr;</span></div>
+            </div>
+        </a>
+
+        <a href="../work.html" class="half half--music" aria-label="For music: event videos and aftermovies in Vienna">
+            <div class="content">
+                <div class="label">02 / For music</div>
+                <h2>For music.</h2>
+                <p class="desc">Concerts, festivals and club nights.</p>
+                <div class="enter"><span class="arrow">&larr;</span> Enter</div>
+            </div>
+        </a>
+
+        <div class="seam" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#c40000" stroke-width="1.5">
+                <rect x="15" y="15" width="34" height="34" transform="rotate(45 32 32)"></rect>
+                <circle cx="32" cy="32" r="3" fill="#c40000" stroke="none"></circle>
+            </svg>
+        </div>
+    </main>
+
+    <div class="legal">
+        <a href="../impressum.html">Impressum</a>
+        <a href="../privacy.html">Datenschutzerklärung</a>
+    </div>
+
+    <script>
+        // Soft glow on each half follows the cursor
+        document.querySelectorAll('.half').forEach((half) => {
+            half.addEventListener('pointermove', (e) => {
+                const r = half.getBoundingClientRect();
+                half.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+                half.style.setProperty('--my', (e.clientY - r.top) + 'px');
+            });
+        });
+    </script>
+<script>
+/* While the visitor chooses, warm up the music page: load the Vimeo player and showreel in a hidden frame
+   so it starts faster once work.html opens. Skipped on data-saver connections. */
+(function () {
+    var c = navigator.connection || {};
+    if (c.saveData) return;
+    function warm() {
+        var f = document.createElement('iframe');
+        f.src = 'https://player.vimeo.com/video/1131278088?dnt=1&autoplay=1&loop=1&autopause=0&muted=1&background=1&controls=0';
+        f.setAttribute('aria-hidden', 'true');
+        f.tabIndex = -1;
+        f.style.cssText = 'position:absolute;width:2px;height:2px;border:0;opacity:0;pointer-events:none;left:-10px;top:-10px;';
+        document.body.appendChild(f);
+    }
+    window.addEventListener('load', function () {
+        if (window.requestIdleCallback) requestIdleCallback(warm, { timeout: 2500 }); else setTimeout(warm, 1200);
+    });
+})();
+</script>
+</body>
+</html>
