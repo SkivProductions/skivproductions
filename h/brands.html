@@ -464,6 +464,8 @@
         .contact-text p { color: var(--text-2); font-size: 1.05rem; line-height: 1.75; font-weight: 400; margin-bottom: 1.1rem; }
         .contact-text .contact-subtitle { font-size: 1.2rem; color: #fff; margin: 1.6rem 0 0; }
     
+        .rights { font-size: 0.72rem; color: #8a8a8a; margin-top: 1.1rem; letter-spacing: 0.02em; }
+        .detail-block.rights-note { font-size: 0.72rem; color: #8a8a8a; }
         /* Red Bull photo series (hidden page) */
         .photoset-media { display: flex; gap: 1.4rem; align-items: flex-start; }
         .pstage { position: relative; width: 360px; max-width: 100%; aspect-ratio: 2 / 3; border-radius: 16px; overflow: hidden; background: #141414; cursor: zoom-in; isolation: isolate; box-shadow: 0 20px 50px -25px rgba(0,0,0,0.9); flex: none; }
@@ -552,6 +554,7 @@
                     <p class="project-desc">A behind-the-scenes film about the technical team that runs the Flycam for Red Bull&rsquo;s live broadcasts.</p>
                     <p class="project-meta"><span><b>Client:</b> Red Bull technical team (internal use)</span><span><b>Type:</b> Behind the scenes</span></p>
                     <button type="button" class="see-more" onclick="showDetails('1249307612')">See more &raquo;</button>
+                    <p class="rights">All rights go to Red Bull Media House.</p>
                 </div>
             </article>
             <article class="project photoset fade-in">
@@ -572,6 +575,7 @@
                         <button type="button" class="see-more" onclick="showDetails('ph:bassline')">See more &raquo;</button>
                         <a class="see-more ghost" href="https://www.instagram.com/p/De4jCM_CIJ7/" target="_blank" rel="noopener noreferrer">Instagram post &rarr;</a>
                     </div>
+                    <p class="rights">All rights go to Red Bull Media House.</p>
                 </div>
             </article>
             <article class="project fade-in">
@@ -584,6 +588,7 @@
                     <p class="project-desc">A recap video of the Red Bull Mobile experience at the race track in Spielberg.</p>
                     <p class="project-meta"><span><b>Client:</b> Red Bull Mobile AT</span><span><b>Type:</b> Recap video</span></p>
                     <button type="button" class="see-more" onclick="showDetails('1249307693')">See more &raquo;</button>
+                    <p class="rights">All rights go to Red Bull Media House.</p>
                 </div>
             </article>
             <!-- 1. Asking Ukrainians -->
@@ -806,7 +811,7 @@
         // Vimeo modal
 
         // Project details for the See more popup
-        var PROJECT_DETAILS = {"1249307693": {"event": "Red Bull Mobile invited raffle winners to an experience at the race track in Spielberg.", "did": "We followed and documented the raffle winners through the experience, then edited a short, energetic video for social media.", "delivered": "A recap video."}, "1249307612": {"event": "Red Bull&rsquo;s technical team set up the Flycam for the livestream of the Dance Your Style finale at the Gloriette in Sch&ouml;nbrunn.", "did": "We followed the team over two days and documented how they built the Flycam setup for the livestream.", "delivered": "A behind-the-scenes film."}, "yt:TapJuWZDrG4": {"event": "In April 2026, Jasmin Thoma travelled to Ukraine to interview people about how the war affects their mental health, including trauma, stress, exhaustion and anxiety. The documentary lets those affected speak for themselves.", "did": "We edited the documentary.", "delivered": "The finished documentary."}, "1131291022": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Vivisol and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131289219": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Fertistream and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131293063": {"event": "Schijt Situatie (Dutch for “shit situation”) is an ecological toilet paper brand that delivers anywhere in Belgium. The campaign is built around one message: wherever you are, and whenever nature strikes, you can order toilet paper.", "did": "We developed and produced the entire campaign for social media, from concept to final edit. With a product like toilet paper, humour was the natural route, so we wrote the jokes around it while keeping the brand message clear.", "delivered": "The seasonal series “When nature strikes” (Desert, Autumn and Winter) and a separate TV sketch."}, "ph:bassline": {"event": "Red Bull Mobile invited influencers to the Red Bull BassLine tennis event to promote the brand.", "did": "We followed the influencers through the event and photographed it, with the focus on the Red Bull Mobile brand and the stickers made for the event.", "delivered": "A selection of edited photos. Red Bull Mobile used them in an Instagram post.", "link": "https://www.instagram.com/p/De4jCM_CIJ7/"}};
+        var PROJECT_DETAILS = {"1249307693": {"rights":"All rights go to Red Bull Media House.","event": "Red Bull Mobile invited raffle winners to an experience at the race track in Spielberg.", "did": "We followed and documented the raffle winners through the experience, then edited a short, energetic video for social media.", "delivered": "A recap video."}, "1249307612": {"rights":"All rights go to Red Bull Media House.","event": "Red Bull&rsquo;s technical team set up the Flycam for the livestream of the Dance Your Style finale at the Gloriette in Sch&ouml;nbrunn.", "did": "We followed the team over two days and documented how they built the Flycam setup for the livestream.", "delivered": "A behind-the-scenes film."}, "yt:TapJuWZDrG4": {"event": "In April 2026, Jasmin Thoma travelled to Ukraine to interview people about how the war affects their mental health, including trauma, stress, exhaustion and anxiety. The documentary lets those affected speak for themselves.", "did": "We edited the documentary.", "delivered": "The finished documentary."}, "1131291022": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Vivisol and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131289219": {"event": "Auriga is a Vienna-based general contractor specialising in interior fit-out. It built the offices of Fertistream and wanted to show the finished result.", "did": "We came to the finished offices and documented the result for Auriga and its client. Afterwards we edited and colour graded the video.", "delivered": "A finished video for Auriga's website and for its client."}, "1131293063": {"event": "Schijt Situatie (Dutch for “shit situation”) is an ecological toilet paper brand that delivers anywhere in Belgium. The campaign is built around one message: wherever you are, and whenever nature strikes, you can order toilet paper.", "did": "We developed and produced the entire campaign for social media, from concept to final edit. With a product like toilet paper, humour was the natural route, so we wrote the jokes around it while keeping the brand message clear.", "delivered": "The seasonal series “When nature strikes” (Desert, Autumn and Winter) and a separate TV sketch."}, "ph:bassline": {"rights":"All rights go to Red Bull Media House.","event": "Red Bull Mobile invited influencers to the Red Bull BassLine tennis event to promote the brand.", "did": "We followed the influencers through the event and photographed it, with the focus on the Red Bull Mobile brand and the stickers made for the event.", "delivered": "A selection of edited photos. Red Bull Mobile used them in an Instagram post.", "link": "https://www.instagram.com/p/De4jCM_CIJ7/"}};
         var PROJECT_META = {"1249307693": ["Red Bull Mobile Experience, Spielberg", "Recap video", false], "1249307612": ["Red Bull Dance Your Style, behind the scenes", "Behind the scenes", false], "yt:TapJuWZDrG4": ["Asking Ukrainians", "Documentary", false], "1131291022": ["Auriga – Vivisol", "Finished interior showcase", false], "1131289219": ["Auriga – Fertistream", "Finished interior showcase", false], "1131293063": ["Schijt Situatie", "Advertising campaign", true], "ph:bassline": ["Red Bull BassLine", "Event photography", true]};
 
         // Photo series: card behaviour and popup picker
@@ -853,6 +858,7 @@
                        '<div class="detail-block"><h4>What we did</h4><div>' + d.did + '</div></div>' +
                        '<div class="detail-block"><h4>What was delivered</h4><div>' + d.delivered + '</div></div>' +
                        (d.credits ? '<div class="detail-block"><h4>Credits</h4><div>' + d.credits + '</div></div>' : '') +
+                       (d.rights ? '<div class="detail-block rights-note">' + d.rights + '</div>' : '') +
                        (d.link ? '<div class="detail-block"><h4>Instagram</h4><div><a href="' + d.link + '" target="_blank" rel="noopener noreferrer">See the post &rarr;</a></div></div>' : '') +
                        '<div class="detail-cta-row"><a href="#contact" class="detail-cta" data-type="' + m[1] + '">Get in touch</a></div>';
             var on = id === '1131293063' && document.querySelector('.campaign .t.on');
